@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\KPIapplication\KPIapplication.csproj" />
-    <ProjectReference Include="..\KPIauth\KPIauth.csproj" />
   </ItemGroup>
 
 </Project>

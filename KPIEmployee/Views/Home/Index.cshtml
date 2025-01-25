@@ -1,8 +1,184 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿
+@{
+    Layout = null;
 }
 
-<div class="text-center">
-    <h1 class="display-4">Bu Index file</h1>
-    <
-</div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KPI</title>
+    <link rel="icon" type="image/png" href="~/images/personal-kpi.png">
+    <link href="~/css/homeindex/homeindex.css" rel="stylesheet" />
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header ">
+            <div class="header__nav container">
+                <div class="logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Kpi.com_Color_Logo.svg/120px-Kpi.com_Color_Logo.svg.png"
+                         alt="">
+                </div>
+
+                <div class="info">
+                    <ul class="header__list">
+                        <li><a href="#"> KPI tizimi</a></li>
+                        <li><a href="#">Imkoniyatlar</a></li>
+                        <li><a href="#">Tizim haqida</a></li>
+                        <li><a href="#">Faollar</a></li>
+                        <li><a href="#">Savollar</a></li>
+                        <li><a href="#">Bog'lanish</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="header__intro container">
+                <h1 class="header__intro_title">Tashkilot maqsadlarini samarali boshqarish -KPI UP tizimi</h1>
+                <p class="header__desc">Biz bilan yuksak marralarni birgalikda zabt eting.</p>
+                <button id="header__intro_bt" class="header__intro_btn"><a asp-controller="Login" asp-action="Index">Tizimga kirish</a></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="intro container">
+            <img class="intro__img" src="~/images/1rasm.png" alt="">
+            <div class="opportunities">
+                <h1 class="opportunities__h1">KPI UP tizimi sizga quyidagi imkoniyatlarni taqdim etadi</h1>
+                <section class="opportunities__s">
+                    <div class="icon"><ion-icon name="layers-outline"></ion-icon></div>
+                    <div class="dowonloand">
+                        <h2 class="opportunities__h2"> Mezonlar yaratish</h2>
+                        <p class="opportunities__p">Tashkilot uchun kerak bo'ladigan ixtiyoriy turdagi mezonlarniyaratish mumkin</p>
+                    </div>
+                </section>
+
+                <section class="opportunities__s">
+                    <div class="icon"><ion-icon name="bookmarks-outline"></ion-icon></div>
+                    <div class="dowonloand">
+                        <h2 class="opportunities__h2"> Mezonga mos hujjat shablonlarini yaratish</h2>
+                        <p class="opportunities__p">Yaratilgan mezon bandlariga mos keluvchi hujjat shablonlarni ixtiyoriy ko'rinishda yaratish va shablonlar dinamik tayyorlanadi, ixtiyoriy vaqtda taxrirlash mumkin</p>
+                    </div>
+                </section>
+
+                <section class="opportunities__s">
+                    <div class="icon"><ion-icon name="reorder-four-outline"></ion-icon></div>
+                    <div class="dowonloand">
+                        <h2 class="opportunities__h2">Ixtiyoriy turdagi hisobotlar</h2>
+                        <p class="opportunities__p">Foydalanuvchilar uchun alohida-alohida roli va lavozimiga qarab, har bir mezon, hujjat turlari va vaqtlar bo'yicha hisobotlar shakllantirib beradi</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <section class="catalog container">
+            <img class="catalog__img" src="~/images/2 кфыь.png" alt="">
+            <div class="catalog__info">
+                <h1 class="catalog__h1">KPI larni shakllantirish uchun quyidagi talablarni aniqlash mumkin.</h1>
+                <p class="catalog__p">KPI tashkilotda nizolar va nosog'lom raqobatni yuzaga keltirmaydigan tarzda ishlab chiqilishi kerak; xodimlar yagona jamoa bo'lib, umumiy maqsadlar uchun birgalikda ishlashi kerak.</p>
+                <div class="catalog__icons">
+                    <i class="catalog__i"><ion-icon name="checkmark-outline"></ion-icon></i>
+                    <p class="catalog__p"> KPIni hisoblash uchun foydalaniladigan ma’lumotlar obyektiv, to‘liq va ishonchli bo‘lishi kerak.</p>
+                </div>
+
+                <div class="catalog__icons">
+                    <i class="catalog__i"><ion-icon name="checkmark-outline"></ion-icon></i>
+                    <p class="catalog__p">KPI mezoni ma’lumotlari tanlangan KPI qiymatini aniqlash davriga muvofiq kerakli vaqtda mavjud bo'lishi kerak.</p>
+                </div>
+
+                <div class="catalog__icons">
+                    <i class="catalog__i"><ion-icon name="checkmark-outline"></ion-icon></i>
+                    <p class="catalog__p"> Hisoblangan natijani tekshirish imkoniyatini ta'minlash kerak.</p>
+                </div>
+
+                <div class="catalog__icons">
+                    <i class="catalog__i"><ion-icon name="checkmark-outline"></ion-icon></i>
+                    <p class="catalog__p"> KPI hisob-kitoblari xodimlar uchun tushunarli bo'lishi kerak.</p>
+                </div>
+
+                <div class="catalog__icons">
+                    <i class="catalog__i"><ion-icon name="checkmark-outline"></ion-icon></i>
+                    <p class="catalog__p"> KPI - bu tashkilotning asosiy maqsadlariga erishish uchun ishlatiladigan tizim</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="catalog container">
+            <div class="catalog__info">
+                <h1 class="catalog__h1">Tizim muvozanatli deb ataladi, qachonki:</h1>
+                <div class="catalog__icons">
+                    <i class="catalog__i"><ion-icon name="checkmark-outline"></ion-icon></i>
+                    <p class="catalog__p">Uning tarkibiy qismlari mantiqiy bog'langan bo'lib, xo'jalik yurituvchi subyekt sifatida korxonaning to'liq tasavvurini bersa.</p>
+                </div>
+
+                <div class="catalog__icons">
+                    <i class="catalog__i"><ion-icon name="checkmark-outline"></ion-icon></i>
+                    <p class="catalog__p"> Innovatsion rivojlanish qobiliyati kabi moddiy va intellektual aktivlarni kuzatishga imkon bersa.</p>
+                </div>
+
+                <div class="catalog__icons">
+                    <i class="catalog__i"><ion-icon name="checkmark-outline"></ion-icon></i>
+                    <p class="catalog__p"> Undan foydalanishda boshqaruvning strategik va operatsion darajalari, o'tmishdagi va kelajakdagi natijalar, korxonaning ichki va tashqi tomonlari o'rtasida muvozanat saqlansa.</p>
+                </div>
+
+                <div class="catalog__icons">
+                    <i class="catalog__i"><ion-icon name="checkmark-outline"></ion-icon></i>
+                    <p class="catalog__p">BSC - bu strategiyani amalga oshirish nuqtai nazaridan faoliyatning barcha jihatlarini hisobga oladigan tarzda tanlangan ko'rsatkichlar to'plami asosida uning samaradorligini baholashga asoslangan korxonani boshqarish vositasi.</p>
+                </div>
+            </div>
+            <img class="catalog__img" src="~/images/3rasm.png" alt="">
+        </section>
+        <section class="catalog container">
+            <img class="catalog__img" src="~/images/4 rasm.png" alt="">
+            <div class="catalog__info">
+                <h1 class="catalog__h1">KPI (Asosiy samaradorlik ko'rsatgichlari) unumdorlikni qanday qilib keskin oshirish kerakligini ko’rsatib beradi. Qoida tariqasida KPI quyidagi turlari ajratiladi:</h1>
+                <p class="catalog__p">KPI tashkilotda nizolar va nosog'lom raqobatni yuzaga keltirmaydigan tarzda ishlab chiqilishi kerak; xodimlar yagona jamoa bo'lib, umumiy maqsadlar uchun birgalikda ishlashi kerak.</p>
+                <div class="catalog__icons">
+                    <i class="catalog__i"><ion-icon name="checkmark-outline"></ion-icon></i>
+                    <p class="catalog__p"> Miqdoriy ko‘rsatkichlar, masalan, pul, ishlab chiqarish hajmi, vaqt, odamlar soni, foizlar va boshqalar yordamida miqdoriy natijalarni xolisona baholash.</p>
+                </div>
+
+                <div class="catalog__icons">
+                    <i class="catalog__i"><ion-icon name="checkmark-outline"></ion-icon></i>
+                    <p class="catalog__p"> Sifat ko’rsatgichlari, ball yoki reyting ko’rinishida taqdim etiladi, ya'ni tashkilot faoliyatining sifat natijalarini subyektiv baholash va ballar asosida baholash.</p>
+                </div>
+
+                <div class="catalog__icons">
+                    <i class="catalog__i"><ion-icon name="checkmark-outline"></ion-icon></i>
+                    <p class="catalog__p"> Hisobot davridagi ishlarning holatini, u yakunlangandan keyin maqsadlarga erishish uchun boshqarish imkonini beruvchi yetakchi yoki tezkor ko‘rsatkichlar.</p>
+                </div>
+
+                <div class="catalog__icons">
+                    <i class="catalog__i"><ion-icon name="checkmark-outline"></ion-icon></i>
+                    <p class="catalog__p">  Individual ko'rsatkichlar, bu har bir xodimning shaxsiy faoliyati va samaradorlik ko’rsatkichlaridir, bular ma'lum bir xodimning aqliy yoki jismoniy kuch sarflash orqali ta'sir qilishi mumkin bo'lgan va ular uchun shaxsan javobgar bo'lgan ko'rsatkichlar.</p>
+                </div>
+
+                <div class="catalog__icons">
+                    <i class="catalog__i"><ion-icon name="checkmark-outline"></ion-icon></i>
+                    <p class="catalog__p"> Jamoaviy ko'rsatkichlar - bular jamoa harakatlariga qarab umumiy natijalarni tavsiflovchi ko'rsatkichlar.</p>
+                </div>
+
+                <div class="catalog__icons">
+                    <i class="catalog__i"><ion-icon name="checkmark-outline"></ion-icon></i>
+                    <p class="catalog__p"> Moliyaviy ko‘rsatkichlar tashkilot (bo‘lim, xodim)ning moliyaviy natijalarini baholaydi. Masalan, daromad, sof foyda, pul ifodasida sotish hajmi, marjinal foyda, rentabellik, aylanma, likvidlik va boshqalar.</p>
+                </div>
+
+                <div class="catalog__icons">
+                    <i class="catalog__i"><ion-icon name="checkmark-outline"></ion-icon></i>
+                    <p class="catalog__p">Nomoliyaviy ko‘rsatkichlar tashkilotning moliyaviy bo‘lmagan natijalarini baholaydi. Masalan, sotish hajmi, bozor ulushi, raqobatdagi ustunlik darajasi, mijozlar ehtiyojini qondirish, xodimlarning qoniqish darajasi, buyurtma berish muddati, mehnat unumdorligi va boshqalar.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>
+

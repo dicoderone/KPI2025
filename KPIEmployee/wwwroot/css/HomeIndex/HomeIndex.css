@@ -1,0 +1,187 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+
+.container {
+    max-width: 1110px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header {
+    background-image: url('../../images/heafer bacground.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 950px;
+    width: 100%;
+}
+
+
+.header__list {
+    display: flex;
+}
+
+
+    .header__list a {
+        padding: 0 15px;
+        color: white;
+        font-size: 20px;
+    }
+
+
+.header__intro_btn {
+    font-size: 16px;
+    color: #000000;
+    font-weight: 500;
+    background: #ffffff;
+    border-radius: 5px;
+    width: 165px;
+    height: 49px;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+
+    .header__intro_btn:active {
+        transform: scale(0.96);
+    }
+
+
+.header__intro_title {
+    width: 650px;
+    color: white;
+    margin-top: 50px;
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.header__desc {
+    color: #ffffff;
+    margin-top: 20px;
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+
+.intro {
+    margin-top: 150px;
+    display: flex;
+}
+
+.intro__img {
+    width: 500px;
+}
+
+
+.opportunities {
+    margin-left: 40px;
+}
+
+
+.opportunities__h1 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #010483;
+    margin-bottom: 40px;
+}
+
+
+.opportunities__s {
+    display: flex;
+    display: block;
+    margin-bottom: 50px;
+}
+
+
+.icon {
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    color: #1acc8d;
+    font-size: 32px;
+    border: 2px solid #7ceec6;
+    border-radius: 50px;
+    margin-right: 20px;
+    transition: 0.5s;
+}
+
+    .icon:hover {
+        background: #1acc8d;
+        color: #ffffff;
+    }
+
+
+.opportunities__h2 {
+    color: #343a40;
+    margin-bottom: 10px;
+}
+
+
+.opportunities__p {
+    line-height: 24px;
+    font-size: 14px;
+}
+
+
+.catalog {
+    margin-top: 150px;
+    display: flex;
+}
+
+.catalog__img {
+    width: 350px;
+}
+
+
+.catalog__info {
+    margin-left: 20px;
+}
+
+
+.catalog__h1 {
+    font-weight: 600;
+    font-size: 30px;
+    color: #010483;
+    margin-bottom: 10px;
+}
+
+
+.catalog__p {
+    color: #444;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+
+.catalog__icons {
+    display: flex;
+}
+
+
+.catalog__i {
+    color: rgb(0, 255, 0);
+    margin-right: 5px;
+}
+
+
+.catalog__p {
+    color: #444;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
