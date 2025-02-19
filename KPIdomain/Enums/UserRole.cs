@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace KPIdomain.Models.Role
+﻿namespace KPIdomain.Role
 {
     public enum UserRole
     {
+        SuperAdmin = 0,
         Admin = 1,
         Teacher = 2,
         CuratorTeacher = 3,

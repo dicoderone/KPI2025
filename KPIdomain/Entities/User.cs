@@ -1,9 +1,4 @@
-﻿using KPIdomain.Models.Role;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using KPIdomain.Role;
 
 namespace KPIdomain.Models
 {
@@ -17,7 +12,8 @@ namespace KPIdomain.Models
         public string Password { get; set; }
 
         public DateTime Birthday { get; set; }
-        public string PasportCode { get; set; }
+
+        public string Passwordhash { get; set; }
 
         public UserRole Role { get; set; }
 

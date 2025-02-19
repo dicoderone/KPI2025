@@ -1,6 +1,6 @@
-using System.Diagnostics;
 using KPIEmployee.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
 
 namespace KPIEmployee.Controllers
 {
