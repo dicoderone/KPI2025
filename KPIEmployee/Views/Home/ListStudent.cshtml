@@ -1,0 +1,51 @@
+﻿@using KPIapplication.ModelDTO
+@model TeacherProfileViewModel
+
+<h2>O‘qituvchi: @Model.TeacherName</h2>
+
+<div class="container-fluid mt-4">
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            <h4 class="mb-0">9 - A sinf o'quvchilari ro'yxati</h4>
+        </div>
+        <div class="card-body">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Ism</th>
+                        <th>Familiya</th>
+                        <th>O‘rtacha Baho</th>
+                        <th>Progress</th>
+                        <th>Deadline</th>
+                        <th>Baxolar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var student in Model.Students)
+                    {
+                        var averageGrade = student.AverageGrade;
+                        var progressPercentage = (int)(averageGrade * 10); // O'rtacha bahoni progress foiziga aylantirish
+
+                        <tr>
+                            <td>@student.Id</td>
+                            <td>@student.FirstName</td>
+                            <td>@student.LastName</td>
+                            <td>@averageGrade.ToString("0.00")</td>
+                            <td>
+                                <div class="progress progress-xs">
+                                    <div class="progress-bar" style="width: @progressPercentage%;"></div>
+                                </div>
+                                <span class="badge">@progressPercentage%</span>
+                            </td>
+                            <td>May 15, 2023</td> <!-- Deadline ni kerakli sana bilan o'zgartiring -->
+                            <td>
+                                <a asp-route-id="@student.Id" asp-action="DetailsStudent" class="btn btn-sm btn-info">Ko'rish</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

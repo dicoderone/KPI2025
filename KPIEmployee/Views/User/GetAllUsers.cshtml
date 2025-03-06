@@ -1,0 +1,71 @@
+﻿@using KPIapplication.ModelDTO
+@model IEnumerable<UserViewModel>
+
+@{
+    ViewData["Title"] = "Пользователи";
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="box">
+            <div class="box-header with-border">
+                <h4 class="box-title">ПОЛЬЗОВАТЕЛИ</h4>
+            </div>
+            <div class="box-body">
+                <div class="d-flex flex-wrap justify-content-between align-items-center" style="margin-top: 0.5rem;">
+                    <div class="form-group">
+                        <a asp-action="CreateUser">
+                            <button type="button" class="btn btn-bold btn-pure btn-primary float-left">ДОБАВИТЬ ПОЛЬЗОВАТЕЛЯ</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table id="example" class="table mt-0 table-hover no-wrap table-striped table-bordered" data-page-size="10" style="text-align: center; width: 99.9%; vertical-align: middle;">
+                        <thead>
+                            <tr >
+                                <th>
+                                    №
+                                </th>
+                                <th>
+                                    Name
+                                </th>
+                                <th>
+                                    Email
+                                </th>
+                                <th>
+                                    Username
+                                </th>
+                                <th>
+                                    Birthday
+                                </th>
+                                <th>
+                                    Role
+                                </th>
+                                <th>Действия</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            @foreach(UserViewModel model in Model)
+                            {
+                                <tr>
+                                    <td>@Html.Raw($"{model.Id}")</td>
+                                    <td>@Html.Raw($"{model.Name}")</td>
+                                    <td>@Html.Raw($"{model.Email}")</td>
+                                    <td>@Html.Raw($"{model.Username}")</td>
+                                    <td>@Html.Raw($"{model.Birthday}")</td>
+                                    <td>@Html.Raw($"{model.Role}")</td>
+                                    <td>@Html.Raw($"Actions")</td>
+                                </tr>
+                                
+                            }
+                           
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+    </div>
+</div>

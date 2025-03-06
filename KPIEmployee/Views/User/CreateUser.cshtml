@@ -1,0 +1,85 @@
+﻿@using KPIapplication.ModelDTO
+@model CreateUserModel
+
+@{
+    ViewData["Title"] = "CreateUser";
+}
+@section styles
+{
+    <style type="text/css">
+
+        #new_pass li [type=checkbox]:checked,
+        #new_pass li [type=checkbox]:not(:checked) {
+            position: relative !important;
+            bottom: -1px;
+            left: 0px;
+            opacity: 1 !important;
+        }
+    </style>
+}
+
+<div class="box">
+    <div class="box-header with-border">
+        <h4 class="box-title">ДОБАВИТЬ ПОЛЬЗОВАТЕЛЯ</h4>
+    </div>
+    <div class="box-body" style="padding: 15px;">
+        <form asp-action="CreateUser">
+            <div class="box m-0">
+                <div class="box-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group mb-1">
+                                <label asp-for="Name" class="control-label">Name</label>
+                                <input asp-for="Name" class="form-control" />
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
+                            <div class="form-group mb-1">
+                                <label asp-for="Email" class="control-label">Email</label>
+                                <input asp-for="Email" class="form-control" />
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                            
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-1">
+                                <label asp-for="Username" class="control-label">Username</label>
+                                <input asp-for="Username" class="form-control" />
+                                <span asp-validation-for="Username" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group mb-1">
+                                <label asp-for="Password" class="control-label">Password</label>
+                                <input asp-for="Password" class="form-control" />
+                                <span asp-validation-for="Username" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group mb-1">
+                                <label asp-for="Birthday" class="control-label date">Birthday</label>
+                                <input asp-for="Birthday" type="datetime" class="form-control" />
+                                <span asp-validation-for="Birthday" class="text-danger"></span>
+                            </div>
+                            <div class="form-group mb-1">
+                                <label asp-for="Role" class="control-label date">Role</label>
+                                <select asp-for="Role" id="worker_id" class="form-control" style="width: 100%" required="required">
+                                    <option value="1">Admin</option>
+                                    <option value="2">Teacher</option>
+                                    <option value="3">CuratorTeacher</option>
+                                    <option value="4">Assistent</option>
+                                    <option value="5">Director</option>
+                                    <option value="6">Kadr</option>
+                                </select>
+                                <span asp-validation-for="Role" class="text-danger"></span>
+                            </div>
+                            
+                    </div>
+                    <div class="box-footer">
+                        <center>
+                            <a asp-action="GetAllUsers" class="btn btn-bold btn-warning btn-primary" style="color: white"><i class="fa fa-backward"></i> Отмена </a>
+                            <button type="submit" class="btn btn-bold btn-pure btn-facebook"><i class="fa fa-save"></i> СОХРАНИТЬ </button>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

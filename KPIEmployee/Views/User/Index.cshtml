@@ -1,0 +1,1236 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>АО «Ўзбекистон темир йўллари»</title>
+    <link rel="icon" type="image/png" href="~/images/favicon.png" />
+
+    <link rel="stylesheet" type="text/css" href="~/assets/vendor_components/font-awesome/css/font-awesome.css" asp-append-version="true">
+    <link rel="stylesheet" type="text/css" href="~/assets/vendor_components/font-awesome/css/font-awesome.min.css" asp-append-version="true">
+
+    <!-- Bootstrap 4.0-->
+    <link rel="stylesheet" href="~/assets/vendor_components/bootstrap/dist/css/bootstrap.css" asp-append-version="true">
+    <!-- Bootstrap extend-->
+    <link rel="stylesheet" href="~/css/bootstrap-extend.css" asp-append-version="true">
+
+    <link rel="stylesheet" type="text/css" href="~/assets/vendor_components/font-awesome/css/font-awesome.css" asp-append-version="true">
+    <link rel="stylesheet" type="text/css" href="~/assets/vendor_components/font-awesome/css/font-awesome.min.css" asp-append-version="true">
+
+    <!-- bootstrap-datetimepicker -->
+    <link href="~/datetime/css/bootstrap-datetimepicker.css" rel="stylesheet" />
+    <!-- theme style -->
+    <link rel="stylesheet" href="~/css/master_style.css" asp-append-version="true">
+    <!-- Fab Admin skins -->
+    <link rel="stylesheet" href="~/css/skins/_all-skins.css" asp-append-version="true">
+
+    <link rel="stylesheet" type="text/css" href="~/css/loader.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/jquery-ui.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/jquery.dataTables.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/jquery-ui-timepicker-addon.min.css" asp-append-version="true">
+    <link href="~/assets/vendor_components/jquery-toast-plugin-master/dist/jquery.toast.min.css" asp-append-version="true" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/select2.min.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/assets/multi-select-js/example-styles.css" asp-append-version="true" type="text/css">
+    <!-- sweetalert -->
+    <link href="~/assets/vendor_components/sweetalert/sweetalert.css" asp-append-version="true" rel="stylesheet" />
+    <link href="~/css/input_and_table_style.css" asp-append-version="true" rel="stylesheet" />
+
+    <!-- GOOGLE Fonts-->
+    <link href="~/new_version_2/fonts/css2Font.css" asp-append-version="true" rel="stylesheet" type="text/css">
+
+    <!--Icons-->
+    <link href="~/new_version_2/vendor/bootstrap-icons/bootstrap-icons.css" asp-append-version="true" rel="stylesheet">
+
+    <!-- Swiper -->
+    <link href="~/new_version_2/vendor/swiper/swiper-bundle.min.css" asp-append-version="true" rel="stylesheet">
+    <script src="~/new_version_2/vendor/swiper/swiper-bundle.min.js?v=1" asp-append-version="true"></script>
+    <!-- /Swiper-->
+
+
+    <style>
+        .ui-dialog {
+            z-index: 10100 !important;
+            background: #ffffff;
+        }
+
+        .ui-dialog-titlebar {
+            background-color: #ffffff;
+            border-bottom-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+            font-size: 20px;
+        }
+
+        .ui-widget-header {
+            border-width: 0 0 1px 0;
+        }
+
+        .ui-icon-closethick {
+            margin-top: -8px !important;
+            margin-left: -8px !important;
+        }
+
+        .ui-dialog .ui-dialog-buttonpane {
+            margin-top: 0px;
+            padding: 0px;
+        }
+
+        .ui-dialog .ui-dialog-titlebar-close {
+            width: 26px;
+            height: 26px;
+        }
+    </style>
+    <style>
+        #myInput, #myInputetsng, #myInputvagon {
+            box-sizing: border-box;
+            min-width: 230px;
+            font-size: 16px;
+            padding: 5px;
+            border: none;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f6f6f6;
+            min-width: 230px;
+            overflow: auto;
+            border: 1px solid #ddd;
+            z-index: 1;
+        }
+
+            .dropdown-content span {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+        .dropdown span:hover {
+            background-color: #ddd;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .scrollable-menu {
+            height: auto;
+            max-height: 300px;
+            overflow-x: hidden;
+        }
+    </style>
+    <style type="text/css">
+        @@media (max-width: 767px) and (min-width: 320px) {
+            .step {
+                font-size: 10px !important;
+            }
+        }
+
+        select.form-control:not([size]):not([multiple]) {
+            height: calc(1.7rem + 2px);
+        }
+
+        .ui-datepicker-calendar {
+            display: none;
+        }
+
+        #example tbody tr.selected {
+            background-color: #B0BED9
+        }
+
+        #example5 tbody tr.selected {
+            background-color: #B0BED9
+        }
+
+        #example6 tbody tr.selected {
+            background-color: #B0BED9
+        }
+
+        #confirmBox {
+            display: none;
+            background-color: #76ACD9;
+            border-radius: 5px;
+            border: 1px solid #aaa;
+            position: fixed;
+            width: 400px;
+            left: 50%;
+            margin-left: -150px;
+            padding: 6px 8px 8px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+            #confirmBox button {
+                background-color: #ccc;
+                display: inline-block;
+                border-radius: 3px;
+                border: 1px solid #aaa;
+                padding: 2px;
+                text-align: center;
+                width: 80px;
+                cursor: pointer;
+            }
+
+                #confirmBox button:hover {
+                    background-color: #ddd;
+                }
+
+            #confirmBox .message {
+                text-align: left;
+                margin-bottom: 8px;
+            }
+
+        #msgBox {
+            display: none;
+            background-color: #76ACD9;
+            border-radius: 5px;
+            border: 1px solid #aaa;
+            position: fixed;
+            width: 400px;
+            left: 50%;
+            margin-left: -150px;
+            padding: 6px 8px 8px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+            #msgBox button {
+                background-color: #ccc;
+                display: inline-block;
+                border-radius: 3px;
+                border: 1px solid #aaa;
+                padding: 2px;
+                text-align: center;
+                width: 80px;
+                cursor: pointer;
+            }
+
+                #msgBox button:hover {
+                    background-color: #ddd;
+                }
+
+            #msgBox .message {
+                text-align: left;
+                margin-bottom: 8px;
+            }
+
+        .tab {
+            display: none;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        .progressbar {
+            margin: 0;
+            padding: 0;
+            counter-reset: step;
+        }
+
+            .progressbar li {
+                list-style-type: none;
+                width: 33%;
+                float: left;
+                font-size: 14px;
+                position: relative;
+                text-align: center;
+                text-transform: uppercase;
+                color: #7d7d7d;
+            }
+
+                .progressbar li:before {
+                    width: 70px;
+                    height: 40px;
+                    content: counter(step);
+                    counter-increment: step;
+                    line-height: 40px;
+                    border: 2px solid rgb(227, 235, 232);
+                    display: block;
+                    text-align: center;
+                    margin: 0 auto 10px auto;
+                    border-radius: 10%;
+                    background-color: white;
+                }
+
+                .progressbar li.active {
+                    color: green;
+                    border-color: #55b776;
+                }
+
+                .progressbar li.finish {
+                    color: #1e88e5;
+                }
+
+                .progressbar li.active:before {
+                    border-color: #55b776;
+                }
+
+        .step.finish::before {
+            border-color: #1e88e5;
+        }
+
+        .step.finish.active:before {
+            border-color: #55b776;
+        }
+
+        .step.finish.active {
+            color: #55b776;
+        }
+
+        .input.invalid {
+            background-color: #ffdddd;
+        }
+
+        @@media screen and (max-width: 600px) {
+            .hide_mob {
+                visibility: hidden;
+                display: none;
+            }
+        }
+    </style>
+
+    <style>
+        .error {
+            color: red;
+        }
+
+        .sidebar_menu_new > li > a {
+            padding: 8px;
+            font-size: 12px;
+            transition: 0.3s ease;
+            border-radius: 10px !important;
+        }
+
+        .media:hover {
+            transform: translateY(-10px);
+        }
+
+        .media {
+            transition: transform 250ms;
+        }
+
+        .f15 {
+            font-size: 14px !important;
+            color: #fff !important;
+        }
+
+        .body_new .sidebar_new a:hover {
+            text-decoration: none;
+            background: #ffffff3d !important;
+        }
+
+        .body_new .sidebar_new {
+            border-color: #1b2f45;
+        }
+
+        @@media (min-width: 768px) {
+            .sidebar_mini_new.sidebar-collapse .sidebar_menu_new > li > a:hover {
+                background: #051236 !important;
+            }
+
+            ul li .fa-circle-thin {
+                display: none;
+            }
+        }
+
+        .pb0 {
+            padding-bottom: 0px !important;
+        }
+
+        .pt0 {
+            padding-top: 0px !important;
+        }
+
+        .fcw {
+            color: #fff !important;
+        }
+
+        /****** FOR FEEDBACK *****/
+
+        .feedback_comment {
+            float: left;
+            width: 100%;
+            height: 120px;
+        }
+
+        #feedback-btn {
+            padding: 0;
+        }
+
+        fieldset, label {
+            margin: 0;
+            padding: 0;
+        }
+
+        /*INSTRUCTION*/
+        #intruction > a > #intruction-icon {
+            font-size: 2em;
+            margin: 2px;
+        }
+
+        #intruction {
+            position: fixed;
+            top: 35%;
+            right: -111px;
+            transition: 0.5s ease;
+        }
+
+        .body_new .sidebar_menu_new .treeview-menu > li > a {
+            margin: 3px 0px;
+            transition: 0.3s ease;
+            border-radius: 10px;
+        }
+        /*.body_new .sidebar_menu_new > li{
+                                    background: #051236;
+                                }
+                                .body_new .sidebar_menu_new > li > .treeview-menu{
+                                    background: #051236 ;
+                                }*/
+
+        .body_new .sidebar_menu_new > li.all_doc > .treeview-menu {
+            max-height: 300px;
+            overflow: scroll;
+            overflow-x: hidden;
+        }
+
+        @@media (max-width : 768px) {
+            #intruction {
+                top: 38.5%;
+            }
+        }
+
+        #intruction:hover {
+            right: 0;
+        }
+
+        #intruction > a {
+            border-radius: 10px;
+            color: #fff;
+        }
+
+            #intruction > a > span {
+                width: 100px;
+            }
+
+        /****** Style Star Rating Widget *****/
+
+        .rating {
+            border: none;
+            float: left;
+        }
+
+            .rating > input[type="radio"] {
+                display: none !important;
+                position: absolute;
+                visibility: hidden;
+            }
+
+            .rating > label:before {
+                margin: 0px;
+                font-size: 2.25em;
+                font-family: FontAwesome;
+                content: "\f005";
+            }
+
+            .rating > label {
+                color: #ddd;
+                float: right;
+            }
+
+        #feedback-form [type=radio]:not(:checked) + label:after, #feedback-form [type=radio]:not(:checked) + label:before {
+            border: none;
+        }
+
+        #feedback-form [type=radio]:checked + label:after {
+            opacity: 0;
+        }
+        /***** CSS Magic to Highlight Stars on Hover *****/
+
+        .rating > input:checked ~ label, /* show gold star when clicked */
+        .rating:not(:checked) > label:hover, /* hover current star */
+        .rating:not(:checked) > label:hover ~ label {
+            color: #FFD700;
+        }
+            /* hover previous stars in list */
+
+            .rating > input:checked + label:hover, /* hover current star when changing rating */
+            .rating > input:checked ~ label:hover,
+            .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+            .rating > input:checked ~ label:hover ~ label {
+                color: #FFED85;
+            }
+
+        .main-header .navbar_new {
+            margin-left: 0px !important;
+        }
+
+        .body_new .main-header .navbar_new {
+            background: #051236;
+        }
+
+        .body_new sidebar_new {
+            border-color: #051236;
+        }
+
+        .header {
+            margin-bottom: 6vh;
+        }
+
+            .header .logo_new img {
+                width: 40px;
+                height: 45px;
+                margin-right: 10px;
+            }
+
+            .header .logo_new div h6, .logo_new p {
+                color: #c7a161;
+                padding: 0;
+                font-family: "Montserrat", sans-serif;
+                margin: 0;
+                letter-spacing: 0.1px;
+                text-transform: uppercase;
+                line-height: 1;
+                text-align: center;
+            }
+
+            .header .logo_new div {
+                background: linear-gradient(90deg, rgba(186,148,62,1) 0%, rgba(236,172,32,1) 20%, rgba(186,148,62,1) 39%, rgba(249,244,180,1) 50%, rgba(186,148,62,1) 60%, rgba(236,172,32,1) 80%, rgba(186,148,62,1) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-size: 200%;
+                animation: shine 5s infinite;
+                background-position: 200% 250%;
+            }
+
+        @@keyframes shine {
+            0% {
+                background-position: 100% 0;
+            }
+
+            100% {
+                background-position: -100% 0;
+            }
+        }
+
+        .header .logo_new div {
+            /*margin-left:0.5%;*/
+        }
+
+            .header .logo_new div h6 {
+                font-weight: 900;
+                line-height: 1;
+                font-size: 14px;
+            }
+
+        .logo_new p {
+            font-weight: 700;
+            font-size: 11px;
+        }
+
+        .navbar_new {
+            flex-wrap: nowrap !important;
+        }
+
+            .navbar_new .image .image_user {
+                width: 50px;
+                height: 45px;
+                border-radius: 50%;
+                border: 1px solid #fff;
+                float: left;
+            }
+
+            .navbar_new .image h6 {
+                color: #fff;
+                margin-bottom: 0px;
+                margin-top: 1.5em;
+            }
+
+            .navbar_new .image p {
+                font-size: 11px;
+                color: #999;
+            }
+
+        .content_wrapper_new .content-header {
+            display: none;
+        }
+
+        @@media (max-width : 768px) {
+            .navbar_new .image .image_user {
+                width: 40px;
+                height: 35px;
+            }
+
+            #notif {
+                position: absolute;
+            }
+
+            a.logo_new {
+                display: flex;
+                justify-content: center;
+            }
+
+            a.user_info {
+                display: none;
+            }
+
+            .header .logo_new img {
+                width: 30px;
+                height: 35px;
+                margin-right: 10px;
+            }
+
+            .header .logo_new div h6 {
+                font-size: 12px;
+            }
+
+            .logo_new p {
+                font-size: 9px;
+            }
+
+            .content_wrapper_new .content-header {
+                display: block;
+            }
+        }
+
+        @@media (max-width : 567px) {
+            .navbar_new .image .image_user {
+                display: none;
+            }
+
+            .header .logo_new div h6 {
+                font-size: 10px;
+            }
+
+            .logo_new p {
+                font-size: 8px;
+            }
+
+            .image {
+                margin-left: 5px !important;
+            }
+
+            .navbar_custom_menu_new .navbar-nav > li:last-child > a {
+                padding: 0px 25px 0px 15px;
+            }
+        }
+
+        @@media (min-width: 768px) {
+            .sidebar_mini_new.sidebar-collapse .main-header .logo_new {
+                width: auto !important;
+                text-align: center;
+            }
+        }
+
+        .body_new .main-sidebar {
+            background-color: #051236 !important;
+        }
+
+        .body_new .sidebar_new {
+            border-color: #051236;
+        }
+
+        .body_new .sidebar_menu_new .treeview-menu > li > a {
+            margin: 3px 0px;
+            transition: 0.3s ease;
+            border-radius: 10px;
+        }
+
+        .body_new .sidebar_menu_new > li > .treeview-menu {
+            background: #051236 !important;
+        }
+
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+            .switch input {
+                opacity: 0;
+                width: 0;
+                height: 0;
+            }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+            .slider:before {
+                position: absolute;
+                content: "";
+                height: 26px;
+                width: 26px;
+                left: 4px;
+                bottom: 4px;
+                background-color: white;
+                -webkit-transition: .4s;
+                transition: .4s;
+            }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked + .slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .sidebar_mini_new {
+            background: #ecedf0 !important
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+
+        .sidebar_mini_new .main-header {
+            margin-bottom: 6vh !important;
+        }
+
+        .sidebar_mini_new .navbar_new {
+            transition: all 0.5s;
+            z-index: 1000;
+        }
+
+            .sidebar_mini_new .navbar_new.sticked {
+                background: #051236);
+                padding: 5px 0px;
+            }
+
+        .sidebar_mini_new .mobile-language-btn {
+            background-color: transparent;
+        }
+
+        .sidebar_mini_new .tools {
+            position: fixed;
+            top: 65vh;
+            right: 0;
+            width: 80px;
+            height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: grab;
+        }
+
+        @@media (max-width : 768px) {
+            .sidebar_mini_new .tools {
+                top: 60vh;
+            }
+        }
+
+        .tools .nav-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: rotate(-45deg);
+        }
+
+        .sidebar_mini_new .tools .nav-content .toggle-btn,
+        .sidebar_mini_new .tools .nav-content span a {
+            height: 60px;
+            width: 60px;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        }
+
+        .sidebar_mini_new .tools .nav-content .toggle-btn {
+            font-size: 35px;
+            color: #0e2431;
+            z-index: 100;
+            cursor: pointer;
+            transform: rotate(-225deg);
+            transition: all 0.6s ease;
+        }
+
+        .sidebar_mini_new .tools.open .toggle-btn {
+            transform: rotate(0deg);
+        }
+
+        .nav-content span {
+            position: absolute;
+            transition: all 0.6s ease;
+            opacity: 0;
+        }
+
+        .sidebar_mini_new .tools.open .nav-content span {
+            transform: rotate(calc(var(--i) * (360deg/6.7))) translateY(110px);
+            opacity: 1;
+            z-index: 9999999;
+        }
+
+        .sidebar_mini_new .tools .nav-content span a {
+            text-decoration: none;
+            transform: rotate(45deg);
+            cursor: pointer;
+        }
+
+            .sidebar_mini_new .tools .nav-content span a i {
+                font-size: 26px;
+                color: #0e2431;
+                transform: rotate(calc(var(--i) * (360deg/ -6.7)));
+                opacity: 0.8;
+                transition: 0.2s;
+            }
+
+            .sidebar_mini_new .tools .nav-content span a:hover i {
+                opacity: 1;
+            }
+
+                .sidebar_mini_new .tools .nav-content span a:hover i.fa-telegram {
+                    color: #0088cc;
+                }
+
+                .sidebar_mini_new .tools .nav-content span a:hover i.fa-star {
+                    color: gold;
+                }
+
+                .sidebar_mini_new .tools .nav-content span a:hover i.fa-cog {
+                    color: #008bad;
+                }
+
+                .sidebar_mini_new .tools .nav-content span a:hover i.fa-book {
+                    color: #0dd6f9;
+                }
+
+                .sidebar_mini_new .tools .nav-content span a:hover i.fa-home {
+                    color: orange;
+                }
+
+
+        .isSelected {
+            background-color: #c4f9d5;
+        }
+
+        .pointer {
+            cursor: pointer;
+        }
+
+        .media {
+            padding: 1rem 0.25rem;
+        }
+
+        .total_new_msg {
+            background-color: red;
+            padding: 0px 6px;
+            display: block;
+            color: white;
+            border-radius: 6px;
+            text-align: center;
+            line-height: 25px;
+        }
+
+        .out_to_chat {
+            position: fixed;
+            text-align: center;
+            right: 2.875rem;
+            bottom: 6.5rem;
+            padding: 6px;
+            z-index: 100;
+            height: 50px;
+            min-width: 50px;
+        }
+        /*.main_logo {
+                            width: 200px;
+                            height: 200px;
+                        }*/
+        .rounded {
+            border-radius: 30px !important;
+        }
+
+        @@media (min-width: 768px) {
+            .sidebar_mini_new .sidebar-collapse .sidebar_menu_new li a:hover {
+                background: #051236 !important;
+            }
+        }
+
+        .skin-blue.sidebar-collapse .sidebar-menu > li:hover > a {
+            background-color: #051236 !important;
+        }
+    </style>
+
+    @RenderSection("styles", required: false)
+
+    <script type="text/javascript" language="javascript" src="~/js/jquery.js" asp-append-version="true"></script>
+    <!-- jQuery 3 -->
+    <script src="~/assets/vendor_components/jquery/dist/jquery.js" asp-append-version="true"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="~/assets/vendor_components/jquery-ui/jquery-ui.js" asp-append-version="true"></script>
+
+    <!-- popper -->
+    <script src="~/assets/vendor_components/popper/dist/popper.min.js" asp-append-version="true"></script>
+
+    <!-- Bootstrap 4.0-->
+    <script src="~/assets/vendor_components/bootstrap/dist/js/bootstrap.js" asp-append-version="true"></script>
+
+    <!-- ChartJS -->
+    <script src="~/assets/vendor_components/chart.js-master/Chart.min.js" asp-append-version="true"></script>
+
+    <!-- Slimscroll -->
+    <script src="~/assets/vendor_components/jquery-slimscroll/jquery.slimscroll.js" asp-append-version="true"></script>
+
+    <script src="~/assets/vendor_components/jquery-steps-master/build/jquery.steps.js" asp-append-version="true"></script>
+    <!-- validate  -->
+    <script src="~/assets/vendor_components/jquery-validation-1.17.0/dist/jquery.validate.min.js" asp-append-version="true"></script>
+    <script type="text/javascript" language="javascript" src="~/js/jquery.dataTables.js" asp-append-version="true"></script>
+    <script type="text/javascript" language="javascript" src="~/js/jquery.dataTables.min.js" asp-append-version="true"></script>
+    <script type="text/javascript" language="javascript" src="~/js/jquery-ui-timepicker-addon.min.js" asp-append-version="true"></script>
+    <script type="text/javascript" language="javascript" src="~/js/money_to_str.js" asp-append-version="true"></script>
+    <script src="~/assets/vendor_components/jquery-toast-plugin-master/dist/jquery.toast.min.js" asp-append-version="true"></script>
+    <script type="text/javascript" language="javascript" src="~/js/select2.full.js" asp-append-version="true"></script>
+
+    <!-- sweetalert -->
+    <script src="~/assets/vendor_components/sweetalert/sweetalert.min.js" asp-append-version="true"></script>
+    <!-- Fab Admin App -->
+    <script type="text/javascript" language="javascript" src="~/js/template.js" asp-append-version="true"></script>
+    <!-- SignalR -->
+    <script type="text/javascript" language="javascript" src="~/lib/microsoft/signalr/dist/browser/signalr.js" asp-append-version="true"></script>
+
+  
+
+
+    <!-- loaderIcon -->
+    <script src="~/js/loaderIcon.js" asp-append-version="true"></script>
+    <!-- / loaderIcon -->
+    <script src="~/js/general.js" asp-append-version="true"></script>
+    <!-- JS for Chat -->
+    <!-- /.JS for Chat -->
+</head>
+
+<body class="hold-transition skin-blue body_new sidebar-mini sidebar_mini_new" id="bodyid">
+    <!-- Preloader -->
+    <div class="loader">
+        <!-- Preloader inner -->
+        <div class="loader-inner">
+            <svg width="120" height="220" viewBox="0 0 100 100" class="loading-spinner" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <circle class="spinner" cx="50" cy="50" r="21" fill="#ffffff" stroke-width="4" />
+            </svg>
+        </div>
+        <!-- End preloader inner -->
+    </div>
+    <!-- End preloader-->
+    <div class="wrapper">
+
+        <header class="main-header header" id="header">
+
+            <!-- Header Navbar -->
+            <nav class="navbar navbar_new navbar-static-top fixed-top">
+                <!-- Sidebar toggle button-->
+                <div class="d-flex align-items-center user_info_part">
+                    <div class="image ml-15 d-flex align-items-center">
+                        <img class="image_user" src="~/images/user.jpg" asp-append-version="true" />
+                        <a class="user_info" asp-controller="Home" asp-action="EditPass">
+
+                            <div class="mt-2 ml-2">
+                                <h6 style="margin-top: 1.1em; max-width:150px;">@ViewBag.user_fio</h6>
+                            </div>
+                        </a>
+
+                    </div>
+                    <div>
+                        <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                            <span class="sr-only">Toggle navigation</span>
+                        </a>
+
+                        <div class="btn-group d-none d-lg-inline-block mt-5" style="visibility: hidden">
+                            <button class="btn dropdown-toggle mr-10 btn-outline btn-white" type="button" data-toggle="dropdown">Русский</button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#"><i></i>O'zbek tilida</a>
+                                <a class="dropdown-item" href="#"><i></i>In English</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a asp-action="Index" asp-controller="Home" class="logo_new d-flex align-items-center ">
+                    <!-- <img src="assets/img/logo.png" alt=""> -->
+                    <img class="main_logo" src="~/new_version_2/img/logo/logo_alone.webp" alt="" asp-append-version="true">
+                    <div>
+                        <h6>"Ўзбекистон Темир Йўллари"</h6>
+                        <p>Акционерное Общество</p>
+                    </div>
+                </a>
+                @*<div class="visibledesktop"><h3 style="color:white; text-align:center;">Профиль @ViewBag.workplace_name / @ViewBag.usertype_name</h3></div>
+                <div class="visibledevice"><h6 style="text-align:center; color:white;">Профиль @ViewBag.workplace_name <br /> @ViewBag.usertype_name</h6></div>
+                *@
+                <div>
+                    <ul>
+                        <!-- Control Sidebar Toggle Button -->
+
+                        <div class="navbar-custom-menu">
+                            <ul class="nav navbar-nav">
+                                <!-- Control Sidebar Toggle Button -->
+                                <li class="dropdown messages-menu">
+                                   
+                                    <ul class="dropdown-menu scale-up">
+                                        <li class="header">Последние уведомления</li>
+                                        <li>
+                                            <!-- inner menu: contains the actual data -->
+                                           
+                                        </li>
+                                        <li class="footer">
+                                            <a asp-action="MarkAsReadAllNotif" asp-controller="Home" style="color: white !important; background-color: #278724"><i class="fa fa-check-square-o"></i> Пометить как прочитанное</a>
+                                        </li>
+                                        <li class="footer"><a asp-controller="Home" asp-action="ListNotif">Все уведомления</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="hide_mob navbar-custom-menu">
+                            <ul class="nav navbar-nav">
+                                <!-- Control Sidebar Toggle Button -->
+                                <li>
+                                    <a class="nav-link" asp-controller="Home" asp-action="Forums"><i class="fa fa-users"></i></a>
+                                    <!--<a href="#" data-toggle="control-sidebar"><i class="fa fa-info"></i></a>-->
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="hide_mob navbar-custom-menu">
+                            <ul class="nav navbar-nav">
+                                <!-- Control Sidebar Toggle Button -->
+                                <li class="dropdown messages-menu">
+                                    <a href="#" class="dropdown" data-toggle="dropdown">
+                                        <i class="fa fa-newspaper-o"></i>
+                                    </a>
+
+                                    <ul class="dropdown-menu scale-up">
+                                        <li class="header">Последние новости</li>
+                                        <li>
+                                            <!-- inner menu: contains the actual data -->
+                                            <ul class="menu inner-content-div" id="newsall"></ul>
+                                        </li>
+                                        <li class="footer"><a href="#">Все новости</a><a href="#">Создать новость</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="hide_mob navbar-custom-menu">
+                            <ul class="nav navbar-nav">
+                                <!-- Control Sidebar Toggle Button -->
+                                <li>
+                                    <a class="nav-link" asp-controller="Home" asp-action="FAQ"><i class="fa fa-info"></i></a>
+                                    <!--<a href="#" data-toggle="control-sidebar"><i class="fa fa-info"></i></a>-->
+                                </li>
+                            </ul>
+                        </div>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar" id="left">
+            <!-- sidebar-->
+            <section class="sidebar sidebar_new">
+
+                <!-- sidebar menu-->
+                <ul class="sidebar-menu sidebar_menu_new" data-widget="tree">
+                    <li class="user-profile">
+                        <a asp-controller="Home" asp-action="Index">
+                        </a>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa fa-group"></i>
+                            <span class="f15">ПОЛЬЗОВАТЕЛИ</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-right pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a asp-action="ListWorker"><i class="fa fa-user"></i> <span>РАБОТНИКИ</span></a></li>
+                            <li><a asp-action="ListUsers"><i class="fa fa-user"></i> <span>ПОЛЬЗОВАТЕЛИ</span></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a asp-action="InternetStatus">
+                            <i class="fa fa-circle-thin"></i><span class="f15">КОМПЬЮТЕР</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" asp-action="FAQ">
+                            <i class="fa fa-info"></i> <span class="f15">ИНСТРУКЦИЯ</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" asp-action="Contacts">
+                            <i class="fa fa-group"></i> <span class="f15">КОНТАКТЫ</span>
+                        </a>
+                    </li>
+                    <li class="treeview" @ViewBag.hidden_zay>
+                        <a href="#">
+                            <i class="fa fa-file-text-o"></i>
+                            <span class="f15">ПРОФИЛЬ</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-right pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href='@Url.Action("EditPass")'><i class="fa fa-user"></i> <span>Изменить</span></a></li>
+                        </ul>
+                    </li>
+                    <li @ViewBag.hidden_zay>
+                        <a href='@Url.Action("Logout")' id="lnkLogOut">
+                            <i class="fa fa-power-off"></i><span class="f15"> ВЫЙТИ </span>
+                        </a>
+                    </li>
+
+                </ul>
+            </section>
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <div class="box" @((ViewBag.user_inn == null || ViewBag.user_inn == "" || ViewBag.user_pin == null || ViewBag.user_pin == "") ? "" : " hidden='hidden' ")>
+                <div class="box-header with-border" @((ViewBag.user_inn == null || ViewBag.user_inn == "") ? "" : " hidden='hidden' ")>
+                    <p class="box-title" style="font-weight: bold; color: #FF0000;">Чтобы активировать ваш профиль, пожалуйста, введите <a class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModalInn">ИНН</a></p>
+                </div>
+                <div class="box-header with-border" @((ViewBag.user_pin == null || ViewBag.user_pin == "") ? "" : " hidden='hidden' ")>
+                    <p class="box-title" style="font-weight: bold; color: #FF0000;">Чтобы активировать ваш профиль, пожалуйста, введите <a class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModalPin">ПИНФЛ</a></p>
+                </div>
+            </div>
+            @if (ViewBag.pinmessages != null && ViewBag.pinmessages != "")
+            {
+                <text>
+                    <div class="box">
+                        <div class="box-header with-border">
+                            <p class="box-title" style="font-weight: bold; color: #FF0000;"> @Html.Raw("" + ViewBag.pinmessages) </p>
+                        </div>
+                    </div>
+                </text>
+            }
+
+            <!-- Main content -->
+            <section class="content" style="padding: 15px;" id="pustoy">
+                @RenderBody()
+            </section>
+            <!-- /.content -->
+            <!-- Content Chat -->
+            <a asp-action="ChatBlock" id="show_chat_block" class="btn btn-app btn-info out_to_chat">
+                <span id="chat_badge" class="badge bg-red" hidden="@(ViewBag.notReadedMsg > 0 ? false : true)">@(ViewBag.notReadedMsg > 0 ? "" + ViewBag.notReadedMsg : "")</span>
+                <i class="fa fa-wechat"></i> Chat
+            </a>
+            <!-- /Content Chat -->
+        </div>
+        <!-- /.content-wrapper -->
+        <footer class="main-footer" id="footer">
+            <div class="pull-right d-none d-sm-inline-block">
+                <ul class="nav nav-primary nav-dotted nav-dot-separated justify-content-center justify-content-md-end">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-action="FAQ">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+            &copy; 2020-<span id="current-year"></span> <a href="#">АО «Узбекистон темир йуллари».</a>
+        </footer>
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-light" id="right">
+        </aside>
+        <!-- /.control-sidebar -->
+        <!-- Add the sidebar's background. This div must be placed immediately after the control sidebar -->
+        <div class="control-sidebar-bg"></div>
+
+    </div>
+    <!-- ./wrapper -->
+    <!-- Modal -->
+    <div class="modal fade" id="myModalInn" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <form asp-action="SaveINN" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Пожалуйста, введите ИНН</h4>
+                    </div>
+                    <div class="modal-body">
+                        <input name='id' type=hidden value='@ViewBag.user_id'>
+                        <input name='inn' class='form-control w-400' />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" name="submit" class="btn btn-bold btn-pure btn-primary float-right">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- ./modal -->
+    <!-- Modal PIN-->
+    <div class="modal fade" id="myModalPin" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <form asp-action="SavePIN" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Пожалуйста, введите ПИНФЛ</h4>
+                    </div>
+                    <div class="modal-body">
+                        <input name='id' type=hidden value='@ViewBag.user_id'>
+                        <input name='pin' class='form-control w-400' />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" name="submit" class="btn btn-bold btn-pure btn-primary float-right">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- ./modal -->
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    
+
+    <style type="text/css">
+        .error {
+            color: red;
+        }
+    </style>
+
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

@@ -1,0 +1,276 @@
+﻿<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pedagog Xodimlar Baholash</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="~/images/barsa.jpg" />
+
+    <link rel="stylesheet" type="text/css" href="~/assets/vendor_components/font-awesome/css/font-awesome.css" asp-append-version="true">
+    <link rel="stylesheet" type="text/css" href="~/assets/vendor_components/font-awesome/css/font-awesome.min.css" asp-append-version="true">
+
+    <!-- Bootstrap 4.0-->
+    <link rel="stylesheet" href="~/assets/vendor_components/bootstrap/dist/css/bootstrap.css" asp-append-version="true">
+    <!-- Bootstrap extend-->
+    <link rel="stylesheet" href="~/css/bootstrap-extend.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/lib/jquery/dist/jquery.min.js" asp-append-version="true">
+
+    <link rel="stylesheet" type="text/css" href="~/assets/vendor_components/font-awesome/css/font-awesome.css" asp-append-version="true">
+    <link rel="stylesheet" type="text/css" href="~/assets/vendor_components/font-awesome/css/font-awesome.min.css" asp-append-version="true">
+
+    <!-- bootstrap-datetimepicker -->
+    <link href="~/datetime/css/bootstrap-datetimepicker.css" rel="stylesheet" />
+    <!-- theme style -->
+    <link rel="stylesheet" href="~/css/master_style.css" asp-append-version="true">
+    <!-- Fab Admin skins -->
+    <link rel="stylesheet" href="~/css/skins/_all-skins.css" asp-append-version="true">
+
+    <link rel="stylesheet" type="text/css" href="~/css/loader.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/jquery-ui.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/jquery.dataTables.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/jquery-ui-timepicker-addon.min.css" asp-append-version="true">
+    <link href="~/assets/vendor_components/jquery-toast-plugin-master/dist/jquery.toast.min.css" asp-append-version="true" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/select2.min.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/assets/multi-select-js/example-styles.css" asp-append-version="true" type="text/css">
+    <!-- sweetalert -->
+    <link href="~/assets/vendor_components/sweetalert/sweetalert.css" asp-append-version="true" rel="stylesheet" />
+    <link href="~/css/input_and_table_style.css" asp-append-version="true" rel="stylesheet" />
+
+    <!-- GOOGLE Fonts-->
+    <link href="~/new_version_2/fonts/css2Font.css" asp-append-version="true" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="~/css/bootstrap-extend.css" asp-append-version="true">
+
+    <script type="text/javascript" language="javascript" src="~/js/jquery.js" asp-append-version="true"></script>
+    <!-- jQuery 3 -->
+    <script src="~/assets/vendor_components/jquery/dist/jquery.js" asp-append-version="true"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="~/assets/vendor_components/jquery-ui/jquery-ui.js" asp-append-version="true"></script>
+
+    <!-- popper -->
+    <script src="~/assets/vendor_components/popper/dist/popper.min.js" asp-append-version="true"></script>
+
+    <!-- Bootstrap 4.0-->
+    <script src="~/assets/vendor_components/bootstrap/dist/js/bootstrap.js" asp-append-version="true"></script>
+
+    <!-- ChartJS -->
+    <script src="~/assets/vendor_components/chart.js-master/Chart.min.js" asp-append-version="true"></script>
+
+    <!-- Slimscroll -->
+    <script src="~/assets/vendor_components/jquery-slimscroll/jquery.slimscroll.js" asp-append-version="true"></script>
+
+    <script src="~/assets/vendor_components/jquery-steps-master/build/jquery.steps.js" asp-append-version="true"></script>
+    <!-- validate  -->
+    <script src="~/assets/vendor_components/jquery-validation-1.17.0/dist/jquery.validate.min.js" asp-append-version="true"></script>
+    <script type="text/javascript" language="javascript" src="~/js/jquery.dataTables.js" asp-append-version="true"></script>
+    <script type="text/javascript" language="javascript" src="~/js/jquery.dataTables.min.js" asp-append-version="true"></script>
+    <script type="text/javascript" language="javascript" src="~/js/jquery-ui-timepicker-addon.min.js" asp-append-version="true"></script>
+    <script type="text/javascript" language="javascript" src="~/js/money_to_str.js" asp-append-version="true"></script>
+    <script src="~/assets/vendor_components/jquery-toast-plugin-master/dist/jquery.toast.min.js" asp-append-version="true"></script>
+    <script type="text/javascript" language="javascript" src="~/js/select2.full.js" asp-append-version="true"></script>
+
+    <!-- sweetalert -->
+    <script src="~/assets/vendor_components/sweetalert/sweetalert.min.js" asp-append-version="true"></script>
+    <!-- Fab Admin App -->
+    <script type="text/javascript" language="javascript" src="~/js/template.js" asp-append-version="true"></script>
+    <!-- SignalR -->
+
+
+
+
+    <!-- loaderIcon -->
+    <script src="~/js/loaderIcon.js" asp-append-version="true"></script>
+    <!-- / loaderIcon -->
+    <script src="~/js/general.js" asp-append-version="true"></script>
+    <!-- JS for Chat -->
+    <!-- /.JS for Chat -->
+    <!--Icons-->
+    <link href="~/new_version_2/vendor/bootstrap-icons/bootstrap-icons.css" asp-append-version="true" rel="stylesheet">
+
+    <!-- Swiper -->
+    <link href="~/new_version_2/vendor/swiper/swiper-bundle.min.css" asp-append-version="true" rel="stylesheet">
+    <script src="~/new_version_2/vendor/swiper/swiper-bundle.min.js?v=1" asp-append-version="true"></script>
+</head>
+<body>
+    <div class="container-fluid mt-4">
+        <div class="card">
+            <div class="card-header text-white" style="background-color:#1a3a6c !important">
+                <h4 class="mb-0">Umumta’lim muassasalaridagi kutubxona xodimlarining faoliyati 100 ballik tizimda quyidagi mezonlar asosida baholash</h4>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-3" style="text-align:center">
+                        <label style="text-align:center"><strong>O‘quv yili:</strong></label>
+                    </div>
+                    <div class="col-md-3" style="text-align:center">
+                        <label><strong>Maksimal Ball:</strong></label>
+                    </div>
+                    <div class="col-md-3" style="text-align:center">
+                        <label><strong>To'plangan Ball:</strong></label>
+                    </div>
+                    <div class="col-md-3" style="text-align:center">
+                        <label><strong>Hujjat:</strong></label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <select class="form-select">
+                            <option selected>2024/2025</option>
+                            <option>2023/2024</option>
+                            <option>2022/2023</option>
+                            <option>2021/2022</option>
+                            <option>2020/2021</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3" style="text-align:center">
+                        <label> 100</label>
+                    </div>
+                    <div class="col-md-3" style="text-align:center">
+                        <label> 0</label>
+                    </div>
+                    <div class="col-md-3" style="text-align:center">
+                        <label> 📄</label>
+                    </div>
+                </div>
+                <br />
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" >
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                <p > 1. Kutubxona bo‘yicha mutaxassislik ma’lumotiga ega bo‘lishi (<strong>10 ball</strong>) <span>10 / 0</span></p>
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <h5>1.1 Nomutaxassislar (<strong style="color:aqua">0</strong> / <span style="color:red">0</span> ball)</h5>
+                                <div class="ms-3">
+                                    <h6>1.1. Nazariy bilimlar, amaliy ko‘nikmalar va zamonaviy tendensiyalarni egallaganlik darajasi</h6>   
+                                    <p>Ochiq mashg‘ulotlar natijalari bo‘yicha - 5 ball</p>
+
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control" placeholder="Izoh">
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="date" class="form-control">
+                                    </div>
+                                    <button class="btn btn-primary">Yuklash</button>
+
+                                    <table class="table mt-3">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Izoh</th>
+                                                <th>Holati</th>
+                                                <th>Ball</th>
+                                                <th>Sana</th>
+                                                <th>Tahrirlash</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td colspan="6" class="text-center">Ma'lumot yo‘q</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <p>Fanlardan resurslarni axborot tizimiga, ta’lim platformasiga joylashtirganligi - 5 ball</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                2. Malaka oshirishdan o‘tganligi (Max &nbsp; <strong>10 ball</strong>)
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <h5>1. O‘qituvchilik faoliyati (20 ball)</h5>
+                                <div class="ms-3">
+                                    <h6>1.1. Nazariy bilimlar, amaliy ko‘nikmalar va zamonaviy tendensiyalarni egallaganlik darajasi</h6>
+                                    <p>Ochiq mashg‘ulotlar natijalari bo‘yicha - 5 ball</p>
+
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control" placeholder="Izoh">
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="date" class="form-control">
+                                    </div>
+                                    <button class="btn btn-primary">Yuklash</button>
+
+                                    <table class="table mt-3">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Izoh</th>
+                                                <th>Holati</th>
+                                                <th>Ball</th>
+                                                <th>Sana</th>
+                                                <th>Tahrirlash</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td colspan="6" class="text-center">Ma'lumot yo‘q</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <p>Fanlardan resurslarni axborot tizimiga, ta’lim platformasiga joylashtirganligi - 5 ball</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                3. Kutubxonachi lavozimidagi ish staji (Max &nbsp; <strong>20 ball</strong>)
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <h5>1. O‘qituvchilik faoliyati (20 ball)</h5>
+                                <div class="ms-3">
+                                    <h6>1.1. Nazariy bilimlar, amaliy ko‘nikmalar va zamonaviy tendensiyalarni egallaganlik darajasi</h6>
+                                    <p>Ochiq mashg‘ulotlar natijalari bo‘yicha - 5 ball</p>
+
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control" placeholder="Izoh">
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="date" class="form-control">
+                                    </div>
+                                    <button class="btn btn-primary">Yuklash</button>
+
+                                    <table class="table mt-3">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Izoh</th>
+                                                <th>Holati</th>
+                                                <th>Ball</th>
+                                                <th>Sana</th>
+                                                <th>Tahrirlash</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td colspan="6" class="text-center">Ma'lumot yo‘q</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <p>Fanlardan resurslarni axborot tizimiga, ta’lim platformasiga joylashtirganligi - 5 ball</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

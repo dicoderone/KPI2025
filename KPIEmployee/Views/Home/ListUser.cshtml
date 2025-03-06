@@ -1,0 +1,46 @@
+﻿@using KPIapplication.ModelDTO
+@model IEnumerable<UserViewModel>
+
+@{
+    ViewData["Title"] = "Пользователи";
+}
+
+<div class="container-fluid mt-4">
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            <h4 class="mb-0">Foydalanuvchilar Ro'yxati</h4>
+        </div>
+        <div class="card-body">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Username</th>
+                        <th>Birthday</th>
+                        <th>Role</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var user in Model) // Modelni aylantirish
+                    {
+                            <tr>
+                                <td>@user.Id</td>
+                                <td>@user.Name</td>
+                                <td>@user.Email</td>
+                                <td>@user.Username</td>
+                                <td>@user.Birthday</td>
+                                <td>@user.Role</td>
+                                <td>
+                                    <a href="#" class="btn btn-sm btn-info">Ko'rish</a>
+                                    <a href="#" class="btn btn-sm btn-warning">Tahrirlash</a>
+                                    <a href="#" class="btn btn-sm btn-danger">O'chirish</a>
+                                </td>
+                            </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
