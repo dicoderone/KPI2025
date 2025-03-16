@@ -1,32 +1,29 @@
-﻿using KPIapplication.Repositories;
-using KPIdomain.Models;
-using KPIinfrastructure.Persistence.EntityTypeConfiguration;
+﻿using KPIdomain.Entities.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 
 namespace KPIinfrastructure.Persistence
 {
-    public class ApplicationDbContext : DbContext, IApplicationDbContext
+    public class ApplicationDbContext : DbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
             AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+            AppContext.SetSwitch("Npgsql.DisableDateTimeInfinityConversions", true);
         }
 
         public DbSet<User> Users { get; set; }
-        public DbSet<Teacher> Teachers { get; set; }
-        public DbSet<Student> Students { get; set; }
-        public DbSet<Grade> Grades { get; set; }
+        public DbSet<Document> Documents { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        public DbSet<DocumentType> DocumentTypes { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder builder)
         {
-            base.OnModelCreating(modelBuilder);
-
-            modelBuilder.ApplyConfiguration(new UserEntityTypeConfiguration());
-            modelBuilder.ApplyConfiguration(new SubjectEntityTypeConfiguration());
-            modelBuilder.ApplyConfiguration(new StudentEntityTypeConfiguration());
-            modelBuilder.ApplyConfiguration(new GradesEntityTypeConfiguration());
-
+            builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+            base.OnModelCreating(builder);
         }
+
+
     }
 }

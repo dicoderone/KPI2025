@@ -22,6 +22,33 @@ namespace KPIinfrastructure.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
+            modelBuilder.Entity("KPIdomain.Entities.KPIScore", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Month")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Score")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("TeacherId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Year")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TeacherId");
+
+                    b.ToTable("KPIScores");
+                });
+
             modelBuilder.Entity("KPIdomain.Models.Grade", b =>
                 {
                     b.Property<int>("Id")
@@ -29,6 +56,9 @@ namespace KPIinfrastructure.Migrations
                         .HasColumnType("integer");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Quarter")
+                        .HasColumnType("integer");
 
                     b.Property<int>("StudentId")
                         .HasColumnType("integer");
@@ -56,6 +86,9 @@ namespace KPIinfrastructure.Migrations
                         .HasColumnType("integer");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Course")
+                        .HasColumnType("text");
 
                     b.Property<string>("FirstName")
                         .IsRequired()
@@ -127,15 +160,15 @@ namespace KPIinfrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<DateTime>("HireDate")
-                        .HasColumnType("timestamp without time zone");
-
                     b.Property<bool>("IsActive")
                         .HasColumnType("boolean");
 
                     b.Property<string>("LastName")
                         .IsRequired()
                         .HasColumnType("text");
+
+                    b.Property<decimal>("MonthlySalary")
+                        .HasColumnType("numeric");
 
                     b.Property<string>("Nationality")
                         .IsRequired()
@@ -149,9 +182,6 @@ namespace KPIinfrastructure.Migrations
                         .HasColumnType("integer");
 
                     b.Property<int>("SubjectId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("YearsOfExperience")
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
@@ -173,11 +203,9 @@ namespace KPIinfrastructure.Migrations
                         .HasColumnType("timestamp without time zone");
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Password")
@@ -205,19 +233,17 @@ namespace KPIinfrastructure.Migrations
                         .IsUnique();
 
                     b.ToTable("User", (string)null);
+                });
 
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Birthday = new DateTime(2003, 9, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "Dicoderone@gmail.com",
-                            Name = "Otabek Alijonov",
-                            Password = "",
-                            Passwordhash = "",
-                            Role = 0,
-                            Username = "SuperAdmin"
-                        });
+            modelBuilder.Entity("KPIdomain.Entities.KPIScore", b =>
+                {
+                    b.HasOne("KPIdomain.Models.Teacher", "Teacher")
+                        .WithMany("KPIScores")
+                        .HasForeignKey("TeacherId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Teacher");
                 });
 
             modelBuilder.Entity("KPIdomain.Models.Grade", b =>
@@ -268,6 +294,8 @@ namespace KPIinfrastructure.Migrations
 
             modelBuilder.Entity("KPIdomain.Models.Teacher", b =>
                 {
+                    b.Navigation("KPIScores");
+
                     b.Navigation("Students");
                 });
 #pragma warning restore 612, 618

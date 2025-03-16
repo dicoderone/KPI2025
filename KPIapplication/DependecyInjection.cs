@@ -1,13 +1,7 @@
-﻿using AutoMapper;
-using KPIapplication.Abstraction;
-using KPIapplication.MappingProfile;
+﻿using KPIapplication.MappingProfile;
 using KPIapplication.Services;
+using KPIapplication.Services.Implication;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KPIapplication
 {
@@ -15,11 +9,26 @@ namespace KPIapplication
     {
         public static IServiceCollection AddApplication(this IServiceCollection services)
         {
-            services.AddScoped<IUserService, UserService>();
-
-            services.AddAutoMapper(typeof(MapProfile));
+            services.RegisterAutoMapper();
+            services.AddDatabase();
+            services.RegisterCashing();
 
             return services;
+        }
+
+        private static void AddDatabase(this IServiceCollection services)
+        {
+            services.AddScoped<IDocumentService, DocumentService>();
+        }
+
+        private static void RegisterAutoMapper(this IServiceCollection services)
+        {
+            services.AddAutoMapper(typeof(IMappingProfilesMarker));
+        }
+
+        private static void RegisterCashing(this IServiceCollection services)
+        {
+            services.AddMemoryCache();
         }
     }
 }

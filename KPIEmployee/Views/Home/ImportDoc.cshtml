@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@using KPIdomain.Entities.Models
+@model IEnumerable<Document>;
+
+<!DOCTYPE html>
 <html lang="uz">
 <head>
     <meta charset="UTF-8">
@@ -41,55 +44,9 @@
     <link href="~/new_version_2/fonts/css2Font.css" asp-append-version="true" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="~/css/bootstrap-extend.css" asp-append-version="true">
 
-    <script type="text/javascript" language="javascript" src="~/js/jquery.js" asp-append-version="true"></script>
-    <!-- jQuery 3 -->
-    <script src="~/assets/vendor_components/jquery/dist/jquery.js" asp-append-version="true"></script>
-    <!-- jQuery UI 1.11.4 -->
-    <script src="~/assets/vendor_components/jquery-ui/jquery-ui.js" asp-append-version="true"></script>
+    <style>
 
-    <!-- popper -->
-    <script src="~/assets/vendor_components/popper/dist/popper.min.js" asp-append-version="true"></script>
-
-    <!-- Bootstrap 4.0-->
-    <script src="~/assets/vendor_components/bootstrap/dist/js/bootstrap.js" asp-append-version="true"></script>
-
-    <!-- ChartJS -->
-    <script src="~/assets/vendor_components/chart.js-master/Chart.min.js" asp-append-version="true"></script>
-
-    <!-- Slimscroll -->
-    <script src="~/assets/vendor_components/jquery-slimscroll/jquery.slimscroll.js" asp-append-version="true"></script>
-
-    <script src="~/assets/vendor_components/jquery-steps-master/build/jquery.steps.js" asp-append-version="true"></script>
-    <!-- validate  -->
-    <script src="~/assets/vendor_components/jquery-validation-1.17.0/dist/jquery.validate.min.js" asp-append-version="true"></script>
-    <script type="text/javascript" language="javascript" src="~/js/jquery.dataTables.js" asp-append-version="true"></script>
-    <script type="text/javascript" language="javascript" src="~/js/jquery.dataTables.min.js" asp-append-version="true"></script>
-    <script type="text/javascript" language="javascript" src="~/js/jquery-ui-timepicker-addon.min.js" asp-append-version="true"></script>
-    <script type="text/javascript" language="javascript" src="~/js/money_to_str.js" asp-append-version="true"></script>
-    <script src="~/assets/vendor_components/jquery-toast-plugin-master/dist/jquery.toast.min.js" asp-append-version="true"></script>
-    <script type="text/javascript" language="javascript" src="~/js/select2.full.js" asp-append-version="true"></script>
-
-    <!-- sweetalert -->
-    <script src="~/assets/vendor_components/sweetalert/sweetalert.min.js" asp-append-version="true"></script>
-    <!-- Fab Admin App -->
-    <script type="text/javascript" language="javascript" src="~/js/template.js" asp-append-version="true"></script>
-    <!-- SignalR -->
-
-
-
-
-    <!-- loaderIcon -->
-    <script src="~/js/loaderIcon.js" asp-append-version="true"></script>
-    <!-- / loaderIcon -->
-    <script src="~/js/general.js" asp-append-version="true"></script>
-    <!-- JS for Chat -->
-    <!-- /.JS for Chat -->
-    <!--Icons-->
-    <link href="~/new_version_2/vendor/bootstrap-icons/bootstrap-icons.css" asp-append-version="true" rel="stylesheet">
-
-    <!-- Swiper -->
-    <link href="~/new_version_2/vendor/swiper/swiper-bundle.min.css" asp-append-version="true" rel="stylesheet">
-    <script src="~/new_version_2/vendor/swiper/swiper-bundle.min.js?v=1" asp-append-version="true"></script>
+    </style>
 </head>
 <body>
     <div class="container-fluid mt-4">
@@ -128,145 +85,1108 @@
                     <div class="col-md-3" style="text-align:center">
                         <label> 0</label>
                     </div>
-                    <div class="col-md-3" style="text-align:center">
-                        <label> 📄</label>
+                    <div class="col-md-3 text-center">
+                        <a href="https://lex.uz/docs/-5194175" style="font-size: 16px;">📄</a>
                     </div>
+
                 </div>
                 <br />
+
                 <div class="accordion" id="accordionExample">
+
+
                     <div class="accordion-item">
-                        <h2 class="accordion-header" >
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-                                <p > 1. Kutubxona bo‘yicha mutaxassislik ma’lumotiga ega bo‘lishi (<strong>10 ball</strong>) <span>10 / 0</span></p>
+
+                        <h2 class="accordion-header">
+                            <button class="accordion-button d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                <span>1. Kutubxona bo‘yicha mutaxassislik ma’lumotiga ega bo‘lishi (<strong>10 ball</strong>)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <span class="text-success ms-auto text-end" style="min-width: 200px; color:darkgreen !important">10 / <span class="text-danger">0</span></span>
+
                             </button>
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                <h5>1.1 Nomutaxassislar (<strong style="color:aqua">0</strong> / <span style="color:red">0</span> ball)</h5>
-                                <div class="ms-3">
-                                    <h6>1.1. Nazariy bilimlar, amaliy ko‘nikmalar va zamonaviy tendensiyalarni egallaganlik darajasi</h6>   
-                                    <p>Ochiq mashg‘ulotlar natijalari bo‘yicha - 5 ball</p>
 
-                                    <div class="mb-3">
-                                        <input type="text" class="form-control" placeholder="Izoh">
+                                <div class="accardion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#1.1">
+                                            <span>1.1 Nomutaxassislar (<strong>0 ball</strong>)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <span class="text-success ms-auto text-end" style="min-width: 200px;">0 / <span class="text-danger">0</span></span>
+
+                                        </button>
+                                    </h2>
+                                    <div id="1.1" class="accordion-collapse collapse">
+                                        <div class="accordion-body">
+                                            <div class="body">
+                                                <div class="container-fluid">
+                                                    <div class="row g-2 d-flex justify-content-center align-items-center">
+                                                        <div class="col-md-8">
+                                                            <div class="row g-2">
+                                                                <div class="col-md-4">
+                                                                    <input type="text" class="form-control" placeholder="Izoh">
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <input type="date" class="form-control">
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <label for="fileUpload" class="btn btn-outline-primary w-100 py-1 px-3 d-flex align-items-center justify-content-center">
+                                                                        <i class="fa fa-upload me-2"></i> Yuklash
+                                                                    </label>
+                                                                    <input type="file" id="fileUpload" class="d-none">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4 d-flex justify-content-center">
+                                                            <button class="btn btn-primary py-1 px-4" style="background-color: dodgerblue; width: 180px;">Yuklash</button>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="mt-4">
+                                                </div>
+                                                <table class="table table-striped mt-3">
+                                                    <thead class="text-white" style="background-color: dimgray; border-bottom: 2px solid #ccc;">
+                                                        <tr>
+                                                            <th style="border: 1px solid #ccc; text-align:center">#</th>
+                                                            <th style="border: 1px solid #ccc; text-align:center">Izoh</th>
+                                                            <th style="border: 1px solid #ccc; text-align:center">Holati</th>
+                                                            <th style="border: 1px solid #ccc; text-align:center">Ball</th>
+                                                            <th style="border: 1px solid #ccc; text-align:center">Sana</th>
+                                                            <th style="border: 1px solid #ccc; text-align:center">Tahrirlash</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="tableBody" style="background-color: aliceblue;">
+                                                        <tr id="noDataRow">
+                                                            <td colspan="6" class="text-center text-muted">
+                                                                <i class="fa fa-file"></i> <br />Ma'lumot yo‘q
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+
+
+                                            </div>
+
+                                        </div>
                                     </div>
-                                    <div class="mb-3">
-                                        <input type="date" class="form-control">
+                                </div>
+                                <div class="accardion-item">
+
+                                    <h2 class="accordion-header">
+                                        <button data-doc-id="12" class="accordion-button d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#12">
+                                            <span>1.2 O‘rta maxsus yoki oliy ma’lumotli mutaxassis bo‘lsa (<strong>10 ball</strong>)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <span class="text-success ms-auto text-end" style="min-width: 200px;">10 / <span class="text-danger">0</span></span>
+
+                                        </button>
+                                    </h2>
+                                    <div id="12" class="accordion-collapse collapse">
+                                        <div class="accordion-body">
+                                            <div class="body">
+
+                                                <div class="container-fluid">
+                                                    <form asp-action="CreateDoc" method="post" enctype="multipart/form-data">
+                                                        <input type="hidden" name="DocumentTypeId" value="12" />
+                                                        <input type="hidden" name="Id">
+
+                                                        <div class="container-fluid"> 
+                                                            <div class="row g-2 d-flex justify-content-center align-items-center">
+                                                                <div class="col-md-8">
+                                                                    <div class="row g-2">
+                                                                        <div class="col-md-4">
+                                                                            <input name="Comment" type="text" class="form-control rounded" placeholder="Izoh"
+                                                                            style="padding: 6px 12px; font-size: 14px;"
+                                                                            >
+                                                                        </div>
+                                                                        <div class="col-md-4">
+                                                                            <input name="CreateDate" type="date" class="form-control rounded"
+                                                                            style="padding: 6px 12px; font-size: 14px;" />
+                                                                        </div>
+                                                                        <div class="col-md-4">
+                                                                            <label for="UploadDocument" class="btn btn-outline-primary w-100 py-1 px-3 d-flex align-items-center justify-content-center rounded" style="font-size: 14px;">
+                                                                                <i class="fa fa-upload me-2"></i> File
+                                                                            </label>
+                                                                            <input id="UploadDocument" name="UploadDocument" type="file" accept=".jpg, .png, .pdf" class="d-none" onchange="showFileName(this)">
+                                                                            <span id="fileName" class="mt-2 text-muted text-center d-block"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4 d-flex justify-content-center">
+                                                                    <button type="submit" class="btn btn-primary py-1 px-4"
+                                                                    style="background-color: dodgerblue; width: 180px;">
+                                                                        Yuklash
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+
+                                                </div>
+                                                <div class="mt-4">
+                                                </div>
+                                                <table class="table table-striped mt-3">
+                                                    <thead class="text-white" style="background-color: dimgray; border-bottom: 2px solid #ccc;">
+                                                        <tr>
+                                                            <th style="border: 1px solid #ccc; text-align:center">#</th>
+                                                            <th style="border: 1px solid #ccc; text-align:center">Izoh</th>
+                                                            <th style="border: 1px solid #ccc; text-align:center">Sana</th>
+                                                            <th style="border: 1px solid #ccc; text-align:center">Ball</th>
+                                                            <th style="border: 1px solid #ccc; text-align:center">Holati</th>
+                                                            <th style="border: 1px solid #ccc; text-align:center">Tahrirlash</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="tableBody12" style="background-color: aliceblue;">
+                                                        @{
+                                                            int number = 1;
+                                                        }
+                                                        @foreach (var doc in Model)
+                                                        {
+                                                            @if (doc.DocumentTypeId == 12)
+                                                            {
+                                                                <tr id="dataRow" class="align-middle text-center">
+                                                                    <td>@number</td>
+                                                                    <td>@doc.Comment</td>
+                                                                    <td>@doc.CreateDate.ToString("dd.MM.yyyy")</td>
+                                                                    <td>@doc.Score</td>
+                                                                    <td>
+                                                                        @switch ((DocumentStatus)doc.Status)
+                                                                        {
+                                                                            case DocumentStatus.Save:
+                                                                                <span class="badge bg-warning text-dark rounded-pill fs-6 p-2 px-4">Saqlangan</span>
+                                                                                break;
+                                                                            case DocumentStatus.Pending:
+                                                                                <span class="badge bg-primary rounded-pill fs-6 p-2 px-4">Ko‘rib chiqilmoqda</span>
+                                                                                break;
+                                                                            case DocumentStatus.Approved:
+                                                                                <span class="badge bg-success rounded-pill fs-6 p-2 px-4">Tasdiqlandi</span>
+                                                                                break;
+                                                                            case DocumentStatus.Rejected:
+                                                                                <span class="badge bg-danger rounded-pill fs-6 p-2 px-4">Rad etildi</span>
+                                                                                break;
+                                                                            default:
+                                                                                <span class="badge bg-secondary rounded-pill fs-6 p-2 px-4">Noma'lum holat</span>
+                                                                                break;
+                                                                        }
+                                                                    </td>
+
+                                                                    <td class="text-center">
+                                                                        <a href="/Document/Edit/@doc.Id" class="btn btn-warning btn-sm px-3 text-dark" style="border-radius: 6px; opacity: 0.9;">
+                                                                            <i class="fa fa-edit"></i> Edit
+                                                                        </a>
+                                                                        <a href="/Document/Details/@doc.Id" class="btn btn-info btn-sm px-3 text-white" style="border-radius: 6px; opacity: 0.9;">
+                                                                            <i class="fa fa-info-circle"></i> Details
+                                                                        </a>
+                                                                        <button class="btn btn-success btn-sm px-3 text-white" style="border-radius: 6px; opacity: 0.9;">
+                                                                            <i class="fa fa-paper-plane"></i> Send
+                                                                        </button>
+                                                                    </td>
+
+                                                                </tr>
+                                                                number++; 
+                                                            }
+                                                            else
+                                                            {
+                                                                <tr>
+                                                                    <td colspan="6" class="text-center text-muted p-3">
+                                                                        <i class="fa fa-file fa-2x"></i> <br />
+                                                                        <span style="font-size: 16px;">Ma'lumot yo‘q</span>
+                                                                    </td>
+                                                                </tr>
+                                                            }
+                                                        }
+                                                            
+                                                        </tbody>
+
+                                                    </table>
+
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    
+                                </div>
+                            </div>
+                            
+                           
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#2">
+                                    <span>2. Malaka oshirishdan o‘tganligi <strong>(10 ball)</strong></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <span class="text-success ms-auto text-end" style="min-width: 200px; color:darkgreen !important">10 / <span class="text-danger">0</span></span>
+                                </button>
+                            </h2>
+                            <div id="2" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="accardion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#2.1">
+                                                <span>2.1 O‘z vaqtida malaka oshirish kurslarida qatnashmagan bo‘lsa (<strong>0 ball</strong>)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <span class="text-success ms-auto text-end" style="min-width: 200px;">0 / <span class="text-danger">0</span></span>
+                                            </button>
+                                        </h2>
+                                        <div id="2.1" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+                                                <div class="body">
+                                                    <div class="container-fluid">
+                                                        <div class="row g-2 d-flex justify-content-center align-items-center">
+                                                            <div class="col-md-8">
+                                                                <div class="row g-2">
+                                                                    <div class="col-md-4">
+                                                                        <input type="text" class="form-control" placeholder="Izoh">
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <input type="date" class="form-control">
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <label for="fileUpload" class="btn btn-outline-primary w-100 py-1 px-3 d-flex align-items-center justify-content-center">
+                                                                            <i class="fa fa-upload me-2"></i> Yuklash
+                                                                        </label>
+                                                                        <input type="file" id="fileUpload" class="d-none">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 d-flex justify-content-center">
+                                                                <button class="btn btn-primary py-1 px-4" style="background-color: dodgerblue; width: 180px;">Yuklash</button>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="mt-4">
+                                                    </div>
+                                                    <table class="table table-striped mt-3">
+                                                        <thead class="text-white" style="background-color: dimgray; border-bottom: 2px solid #ccc;">
+                                                            <tr>
+                                                                <th style="border: 1px solid #ccc; text-align:center">#</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Izoh</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Holati</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Ball</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Sana</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Tahrirlash</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody id="tableBody" style="background-color: aliceblue;">
+                                                            <tr id="noDataRow">
+                                                                <td colspan="6" class="text-center text-muted">
+                                                                    <i class="fa fa-file"></i> <br />Ma'lumot yo‘q
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+
+
+                                                </div>
+
+                                            </div>
+                                        </div>
                                     </div>
-                                    <button class="btn btn-primary">Yuklash</button>
+                                    <div class="accardion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#2.2">
+                                                <span>2.2 Malaka oshirish kurslari yakuniga ko‘ra yakuniy attestatsiyadan o‘ta olmagan va tegishli ma’lumotnoma yoki sertifikatga ega bo‘lmasa (<strong>2 ball</strong>)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <span class="text-success ms-auto text-end" style="min-width: 200px;">2 / <span class="text-danger">0</span></span>
+                                            </button>
+                                        </h2>
+                                        <div id="2.2" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+                                                <div class="body">
+                                                    <div class="container-fluid">
+                                                        <div class="row g-2 d-flex justify-content-center align-items-center">
+                                                            <div class="col-md-8">
+                                                                <div class="row g-2">
+                                                                    <div class="col-md-4">
+                                                                        <input type="text" class="form-control" placeholder="Izoh">
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <input type="date" class="form-control">
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <label for="fileUpload" class="btn btn-outline-primary w-100 py-1 px-3 d-flex align-items-center justify-content-center">
+                                                                            <i class="fa fa-upload me-2"></i> Yuklash
+                                                                        </label>
+                                                                        <input type="file" id="fileUpload" class="d-none">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 d-flex justify-content-center">
+                                                                <button class="btn btn-primary py-1 px-4" style="background-color: dodgerblue; width: 180px;">Yuklash</button>
+                                                            </div>
+                                                        </div>
 
-                                    <table class="table mt-3">
-                                        <thead>
-                                            <tr>
-                                                <th>#</th>
-                                                <th>Izoh</th>
-                                                <th>Holati</th>
-                                                <th>Ball</th>
-                                                <th>Sana</th>
-                                                <th>Tahrirlash</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td colspan="6" class="text-center">Ma'lumot yo‘q</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                                    </div>
+                                                    <div class="mt-4">
+                                                    </div>
+                                                    <table class="table table-striped mt-3">
+                                                        <thead class="text-white" style="background-color: dimgray; border-bottom: 2px solid #ccc;">
+                                                            <tr>
+                                                                <th style="border: 1px solid #ccc; text-align:center">#</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Izoh</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Holati</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Ball</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Sana</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Tahrirlash</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody id="tableBody" style="background-color: aliceblue;">
+                                                            <tr id="noDataRow">
+                                                                <td colspan="6" class="text-center text-muted">
+                                                                    <i class="fa fa-file"></i> <br />Ma'lumot yo‘q
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
 
-                                    <p>Fanlardan resurslarni axborot tizimiga, ta’lim platformasiga joylashtirganligi - 5 ball</p>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accardion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#2.3">
+                                                <span>2.3 O‘z vaqtida malaka oshirish kurslaridan o‘tib, tegishli ma’lumotnoma yoki sertifikatga ega bo‘lsa (<strong>10 ball</strong>)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <span class="text-success ms-auto text-end" style="min-width: 200px;">10 / <span class="text-danger">0</span></span>
+                                            </button>
+                                        </h2>
+                                        <div id="2.3" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+                                                <div class="body">
+                                                    <div class="container-fluid">
+                                                        <div class="row g-2 d-flex justify-content-center align-items-center">
+                                                            <div class="col-md-8">
+                                                                <div class="row g-2">
+                                                                    <div class="col-md-4">
+                                                                        <input type="text" class="form-control" placeholder="Izoh">
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <input type="date" class="form-control">
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <label for="fileUpload" class="btn btn-outline-primary w-100 py-1 px-3 d-flex align-items-center justify-content-center">
+                                                                            <i class="fa fa-upload me-2"></i> Yuklash
+                                                                        </label>
+                                                                        <input type="file" id="fileUpload" class="d-none">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 d-flex justify-content-center">
+                                                                <button class="btn btn-primary py-1 px-4" style="background-color: dodgerblue; width: 180px;">Yuklash</button>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="mt-4">
+                                                    </div>
+                                                    <table class="table table-striped mt-3">
+                                                        <thead class="text-white" style="background-color: dimgray; border-bottom: 2px solid #ccc;">
+                                                            <tr>
+                                                                <th style="border: 1px solid #ccc; text-align:center">#</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Izoh</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Holati</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Ball</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Sana</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Tahrirlash</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody id="tableBody" style="background-color: aliceblue;">
+                                                            <tr id="noDataRow">
+                                                                <td colspan="6" class="text-center text-muted">
+                                                                    <i class="fa fa-file"></i> <br />Ma'lumot yo‘q
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-                                2. Malaka oshirishdan o‘tganligi (Max &nbsp; <strong>10 ball</strong>)
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <h5>1. O‘qituvchilik faoliyati (20 ball)</h5>
-                                <div class="ms-3">
-                                    <h6>1.1. Nazariy bilimlar, amaliy ko‘nikmalar va zamonaviy tendensiyalarni egallaganlik darajasi</h6>
-                                    <p>Ochiq mashg‘ulotlar natijalari bo‘yicha - 5 ball</p>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#3">
+                                    <span>3. Kutubxonachi lavozimidagi ish staji <strong>(20 ball)</strong></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <span class="text-success ms-auto text-end" style="min-width: 200px; color:darkgreen !important">20 / <span class="text-danger">0</span></span>
+                                </button>
+                            </h2>
+                            <div id="3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="accardion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#3.1">
+                                                <span>3.1 Kutubxonachilikka oid ish staji 1 yildan 5 yilgacha (<strong>5 ball</strong>)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <span class="text-success ms-auto text-end" style="min-width: 200px;">5 / <span class="text-danger">0</span></span>
+                                            </button>
+                                        </h2>
+                                        <div id="3.1" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+                                                <div class="body">
+                                                    <div class="container-fluid">
+                                                        <div class="row g-2 d-flex justify-content-center align-items-center">
+                                                            <div class="col-md-8">
+                                                                <div class="row g-2">
+                                                                    <div class="col-md-4">
+                                                                        <input type="text" class="form-control" placeholder="Izoh">
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <input type="date" class="form-control">
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <label for="fileUpload" class="btn btn-outline-primary w-100 py-1 px-3 d-flex align-items-center justify-content-center">
+                                                                            <i class="fa fa-upload me-2"></i> Yuklash
+                                                                        </label>
+                                                                        <input type="file" id="fileUpload" class="d-none">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 d-flex justify-content-center">
+                                                                <button class="btn btn-primary py-1 px-4" style="background-color: dodgerblue; width: 180px;">Yuklash</button>
+                                                            </div>
+                                                        </div>
 
-                                    <div class="mb-3">
-                                        <input type="text" class="form-control" placeholder="Izoh">
+                                                    </div>
+                                                    <div class="mt-4">
+                                                    </div>
+                                                    <table class="table table-striped mt-3">
+                                                        <thead class="text-white" style="background-color: dimgray; border-bottom: 2px solid #ccc;">
+                                                            <tr>
+                                                                <th style="border: 1px solid #ccc; text-align:center">#</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Izoh</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Holati</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Ball</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Sana</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Tahrirlash</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody id="tableBody" style="background-color: aliceblue;">
+                                                            <tr id="noDataRow">
+                                                                <td colspan="6" class="text-center text-muted">
+                                                                    <i class="fa fa-file"></i> <br />Ma'lumot yo‘q
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+
+
+                                                </div>
+
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="mb-3">
-                                        <input type="date" class="form-control">
+                                    <div class="accardion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#3.2">
+                                                <span>3.2 Kutubxonachilikka oid ish staji 5 yildan 10 yilgacha (<strong>10 ball</strong>)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <span class="text-success ms-auto text-end" style="min-width: 200px;">10 / <span class="text-danger">0</span></span>
+                                            </button>
+                                        </h2>
+                                        <div id="3.2" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+                                                <div class="body">
+                                                    <div class="container-fluid">
+                                                        <div class="row g-2 d-flex justify-content-center align-items-center">
+                                                            <div class="col-md-8">
+                                                                <div class="row g-2">
+                                                                    <div class="col-md-4">
+                                                                        <input type="text" class="form-control" placeholder="Izoh">
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <input type="date" class="form-control">
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <label for="fileUpload" class="btn btn-outline-primary w-100 py-1 px-3 d-flex align-items-center justify-content-center">
+                                                                            <i class="fa fa-upload me-2"></i> Yuklash
+                                                                        </label>
+                                                                        <input type="file" id="fileUpload" class="d-none">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 d-flex justify-content-center">
+                                                                <button class="btn btn-primary py-1 px-4" style="background-color: dodgerblue; width: 180px;">Yuklash</button>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="mt-4">
+                                                    </div>
+                                                    <table class="table table-striped mt-3">
+                                                        <thead class="text-white" style="background-color: dimgray; border-bottom: 2px solid #ccc;">
+                                                            <tr>
+                                                                <th style="border: 1px solid #ccc; text-align:center">#</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Izoh</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Holati</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Ball</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Sana</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Tahrirlash</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody id="tableBody" style="background-color: aliceblue;">
+                                                            <tr id="noDataRow">
+                                                                <td colspan="6" class="text-center text-muted">
+                                                                    <i class="fa fa-file"></i> <br />Ma'lumot yo‘q
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+
+
+                                                </div>
+
+                                            </div>
+                                        </div>
                                     </div>
-                                    <button class="btn btn-primary">Yuklash</button>
+                                    <div class="accardion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#3.3">
+                                                <span>3.3 Kutubxonachilikka oid ish staji 10 yil va undanyuqori (<strong>20 ball</strong>)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <span class="text-success ms-auto text-end" style="min-width: 200px;">20 / <span class="text-danger">0</span></span>
+                                            </button>
+                                        </h2>
+                                        <div id="3.3" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+                                                <div class="body">
+                                                    <div class="container-fluid">
+                                                        <div class="row g-2 d-flex justify-content-center align-items-center">
+                                                            <div class="col-md-8">
+                                                                <div class="row g-2">
+                                                                    <div class="col-md-4">
+                                                                        <input type="text" class="form-control" placeholder="Izoh">
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <input type="date" class="form-control">
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <label for="fileUpload" class="btn btn-outline-primary w-100 py-1 px-3 d-flex align-items-center justify-content-center">
+                                                                            <i class="fa fa-upload me-2"></i> Yuklash
+                                                                        </label>
+                                                                        <input type="file" id="fileUpload" class="d-none">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 d-flex justify-content-center">
+                                                                <button class="btn btn-primary py-1 px-4" style="background-color: dodgerblue; width: 180px;">Yuklash</button>
+                                                            </div>
+                                                        </div>
 
-                                    <table class="table mt-3">
-                                        <thead>
-                                            <tr>
-                                                <th>#</th>
-                                                <th>Izoh</th>
-                                                <th>Holati</th>
-                                                <th>Ball</th>
-                                                <th>Sana</th>
-                                                <th>Tahrirlash</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td colspan="6" class="text-center">Ma'lumot yo‘q</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                                    </div>
+                                                    <div class="mt-4">
+                                                    </div>
+                                                    <table class="table table-striped mt-3">
+                                                        <thead class="text-white" style="background-color: dimgray; border-bottom: 2px solid #ccc;">
+                                                            <tr>
+                                                                <th style="border: 1px solid #ccc; text-align:center">#</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Izoh</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Holati</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Ball</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Sana</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Tahrirlash</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody id="tableBody" style="background-color: aliceblue;">
+                                                            <tr id="noDataRow">
+                                                                <td colspan="6" class="text-center text-muted">
+                                                                    <i class="fa fa-file"></i> <br />Ma'lumot yo‘q
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
 
-                                    <p>Fanlardan resurslarni axborot tizimiga, ta’lim platformasiga joylashtirganligi - 5 ball</p>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
-                                3. Kutubxonachi lavozimidagi ish staji (Max &nbsp; <strong>20 ball</strong>)
-                            </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <h5>1. O‘qituvchilik faoliyati (20 ball)</h5>
-                                <div class="ms-3">
-                                    <h6>1.1. Nazariy bilimlar, amaliy ko‘nikmalar va zamonaviy tendensiyalarni egallaganlik darajasi</h6>
-                                    <p>Ochiq mashg‘ulotlar natijalari bo‘yicha - 5 ball</p>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#4">
+                                    <span>4. Maktabda ehtiyojga ko‘ra darsliklar bo‘yicha buyurtmalarning to‘g‘ri shakllantirilganligi <strong>(30 ball)</strong></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <span class="text-success ms-auto text-end" style="min-width: 200px; color:darkgreen !important">30 / <span class="text-danger">0</span></span>
+                                </button>
+                            </h2>
+                            <div id="4" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="accardion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#4.1">
+                                                <span>
+                                                    4.1 Buyurtmalarni shakllantirishda 10 foizdan ortiq xatoliklar mavjud bo‘lsa va darsliklar bilan ta’minlanganlik
+                                                    80 foizdan past bo‘lsa (<strong>0 ball</strong>)
+                                                </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <span class="text-success ms-auto text-end" style="min-width: 200px;">0 / <span class="text-danger">0</span></span>
+                                            </button>
+                                        </h2>
+                                        <div id="4.1" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+                                                <div class="body">
+                                                    <div class="container-fluid">
+                                                        <div class="row g-2 d-flex justify-content-center align-items-center">
+                                                            <div class="col-md-8">
+                                                                <div class="row g-2">
+                                                                    <div class="col-md-4">
+                                                                        <input type="text" class="form-control" placeholder="Izoh">
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <input type="date" class="form-control">
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <label for="fileUpload" class="btn btn-outline-primary w-100 py-1 px-3 d-flex align-items-center justify-content-center">
+                                                                            <i class="fa fa-upload me-2"></i> Yuklash
+                                                                        </label>
+                                                                        <input type="file" id="fileUpload" class="d-none">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 d-flex justify-content-center">
+                                                                <button class="btn btn-primary py-1 px-4" style="background-color: dodgerblue; width: 180px;">Yuklash</button>
+                                                            </div>
+                                                        </div>
 
-                                    <div class="mb-3">
-                                        <input type="text" class="form-control" placeholder="Izoh">
+                                                    </div>
+                                                    <div class="mt-4">
+                                                    </div>
+                                                    <table class="table table-striped mt-3">
+                                                        <thead class="text-white" style="background-color: dimgray; border-bottom: 2px solid #ccc;">
+                                                            <tr>
+                                                                <th style="border: 1px solid #ccc; text-align:center">#</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Izoh</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Holati</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Ball</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Sana</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Tahrirlash</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody id="tableBody" style="background-color: aliceblue;">
+                                                            <tr id="noDataRow">
+                                                                <td colspan="6" class="text-center text-muted">
+                                                                    <i class="fa fa-file"></i> <br />Ma'lumot yo‘q
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+
+
+                                                </div>
+
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="mb-3">
-                                        <input type="date" class="form-control">
+                                    <div class="accardion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#4.2">
+                                                <span>4.2 Buyurtmalarni shakllantirishda 10 foizgacha xatoliklar mavjud bo‘lsa va darsliklar bilan ta’minlanganlik 80 — 89 foizni tashkil etsa (<strong>10 ball</strong>)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <span class="text-success ms-auto text-end" style="min-width: 200px;">10 / <span class="text-danger">0</span></span>
+                                            </button>
+                                        </h2>
+                                        <div id="4.2" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+                                                <div class="body">
+                                                    <div class="container-fluid">
+                                                        <div class="row g-2 d-flex justify-content-center align-items-center">
+                                                            <div class="col-md-8">
+                                                                <div class="row g-2">
+                                                                    <div class="col-md-4">
+                                                                        <input type="text" class="form-control" placeholder="Izoh">
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <input type="date" class="form-control">
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <label for="fileUpload" class="btn btn-outline-primary w-100 py-1 px-3 d-flex align-items-center justify-content-center">
+                                                                            <i class="fa fa-upload me-2"></i> Yuklash
+                                                                        </label>
+                                                                        <input type="file" id="fileUpload" class="d-none">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 d-flex justify-content-center">
+                                                                <button class="btn btn-primary py-1 px-4" style="background-color: dodgerblue; width: 180px;">Yuklash</button>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="mt-4">
+                                                    </div>
+                                                    <table class="table table-striped mt-3">
+                                                        <thead class="text-white" style="background-color: dimgray; border-bottom: 2px solid #ccc;">
+                                                            <tr>
+                                                                <th style="border: 1px solid #ccc; text-align:center">#</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Izoh</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Holati</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Ball</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Sana</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Tahrirlash</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody id="tableBody" style="background-color: aliceblue;">
+                                                            <tr id="noDataRow">
+                                                                <td colspan="6" class="text-center text-muted">
+                                                                    <i class="fa fa-file"></i> <br />Ma'lumot yo‘q
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+
+
+                                                </div>
+
+                                            </div>
+                                        </div>
                                     </div>
-                                    <button class="btn btn-primary">Yuklash</button>
+                                    <div class="accardion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#4.3">
+                                                <span>4.3 Buyurtmalarni shakllantirishda 5 foizgacha xatoliklar mavjud bo‘lsa va darsliklar bilan ta’minlanganlik 90 — 95 foizni tashkil etsa (<strong>20 ball</strong>)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <span class="text-success ms-auto text-end" style="min-width: 200px;">20 / <span class="text-danger">0</span></span>
+                                            </button>
+                                        </h2>
+                                        <div id="4.3" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+                                                <div class="body">
+                                                    <div class="container-fluid">
+                                                        <div class="row g-2 d-flex justify-content-center align-items-center">
+                                                            <div class="col-md-8">
+                                                                <div class="row g-2">
+                                                                    <div class="col-md-4">
+                                                                        <input type="text" class="form-control" placeholder="Izoh">
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <input type="date" class="form-control">
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <label for="fileUpload" class="btn btn-outline-primary w-100 py-1 px-3 d-flex align-items-center justify-content-center">
+                                                                            <i class="fa fa-upload me-2"></i> Yuklash
+                                                                        </label>
+                                                                        <input type="file" id="fileUpload" class="d-none">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 d-flex justify-content-center">
+                                                                <button class="btn btn-primary py-1 px-4" style="background-color: dodgerblue; width: 180px;">Yuklash</button>
+                                                            </div>
+                                                        </div>
 
-                                    <table class="table mt-3">
-                                        <thead>
-                                            <tr>
-                                                <th>#</th>
-                                                <th>Izoh</th>
-                                                <th>Holati</th>
-                                                <th>Ball</th>
-                                                <th>Sana</th>
-                                                <th>Tahrirlash</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td colspan="6" class="text-center">Ma'lumot yo‘q</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                                    </div>
+                                                    <div class="mt-4">
+                                                    </div>
+                                                    <table class="table table-striped mt-3">
+                                                        <thead class="text-white" style="background-color: dimgray; border-bottom: 2px solid #ccc;">
+                                                            <tr>
+                                                                <th style="border: 1px solid #ccc; text-align:center">#</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Izoh</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Holati</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Ball</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Sana</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Tahrirlash</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody id="tableBody" style="background-color: aliceblue;">
+                                                            <tr id="noDataRow">
+                                                                <td colspan="6" class="text-center text-muted">
+                                                                    <i class="fa fa-file"></i> <br />Ma'lumot yo‘q
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
 
-                                    <p>Fanlardan resurslarni axborot tizimiga, ta’lim platformasiga joylashtirganligi - 5 ball</p>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accardion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#4.4">
+                                                <span>4.4 Buyurtmalar to‘g‘ri shakllantirilgan va darsliklar bilan ta’minlanganlik 96 — 100 foizni tashkil etsa (<strong>30 ball</strong>)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <span class="text-success ms-auto text-end" style="min-width: 200px;">30 / <span class="text-danger">0</span></span>
+                                            </button>
+                                        </h2>
+                                        <div id="4.4" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+                                                <div class="body">
+                                                    <div class="container-fluid">
+                                                        <div class="row g-2 d-flex justify-content-center align-items-center">
+                                                            <div class="col-md-8">
+                                                                <div class="row g-2">
+                                                                    <div class="col-md-4">
+                                                                        <input type="text" class="form-control" placeholder="Izoh">
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <input type="date" class="form-control">
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <label for="fileUpload" class="btn btn-outline-primary w-100 py-1 px-3 d-flex align-items-center justify-content-center">
+                                                                            <i class="fa fa-upload me-2"></i> Yuklash
+                                                                        </label>
+                                                                        <input type="file" id="fileUpload" class="d-none">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 d-flex justify-content-center">
+                                                                <button class="btn btn-primary py-1 px-4" style="background-color: dodgerblue; width: 180px;">Yuklash</button>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="mt-4">
+                                                    </div>
+                                                    <table class="table table-striped mt-3">
+                                                        <thead class="text-white" style="background-color: dimgray; border-bottom: 2px solid #ccc;">
+                                                            <tr>
+                                                                <th style="border: 1px solid #ccc; text-align:center">#</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Izoh</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Holati</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Ball</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Sana</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Tahrirlash</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody id="tableBody" style="background-color: aliceblue;">
+                                                            <tr id="noDataRow">
+                                                                <td colspan="6" class="text-center text-muted">
+                                                                    <i class="fa fa-file"></i> <br />Ma'lumot yo‘q
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#5">
+                                    <span>5. O‘quvchilarning kutubxonaga jalb qilinishi <strong>(30 ball)</strong></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <span class="text-success ms-auto text-end" style="min-width: 200px; color:darkgreen !important">30 / <span class="text-danger">0</span></span>
+                                </button>
+                            </h2>
+                            <div id="5" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="accardion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#5.1">
+                                                <span>5.1 Har oyda umumiy o‘quvchilarning 1 foizdan 30 foizgacha jalb qilingan bo‘lsa (<strong>10 ball</strong>)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <span class="text-success ms-auto text-end" style="min-width: 200px;">10 / <span class="text-danger">0</span></span>
+                                            </button>
+                                        </h2>
+                                        <div id="5.1" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+                                                <div class="body">
+                                                    <div class="container-fluid">
+                                                        <div class="row g-2 d-flex justify-content-center align-items-center">
+                                                            <div class="col-md-8">
+                                                                <div class="row g-2">
+                                                                    <div class="col-md-4">
+                                                                        <input type="text" class="form-control" placeholder="Izoh">
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <input type="date" class="form-control">
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <label for="fileUpload" class="btn btn-outline-primary w-100 py-1 px-3 d-flex align-items-center justify-content-center">
+                                                                            <i class="fa fa-upload me-2"></i> Yuklash
+                                                                        </label>
+                                                                        <input type="file" id="fileUpload" class="d-none">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 d-flex justify-content-center">
+                                                                <button class="btn btn-primary py-1 px-4" style="background-color: dodgerblue; width: 180px;">Yuklash</button>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="mt-4">
+                                                    </div>
+                                                    <table class="table table-striped mt-3">
+                                                        <thead class="text-white" style="background-color: dimgray; border-bottom: 2px solid #ccc;">
+                                                            <tr>
+                                                                <th style="border: 1px solid #ccc; text-align:center">#</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Izoh</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Holati</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Ball</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Sana</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Tahrirlash</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody id="tableBody" style="background-color: aliceblue;">
+                                                            @foreach (var item in Model)
+                                                            {
+                                                                @if (item.DocumentTypeId == 12)
+                                                                {
+                                                                    <tr id="dataRow">
+                                                                        <td>@item.Id</td>
+                                                                        <td>@item.Comment</td>
+                                                                        <td>@item.Status</td>
+                                                                        <td>@item.Score</td>
+                                                                        <td>@item.CreateDate</td>
+                                                                        <td><button class="btn btn-warning btn-sm">Edit</button></td>
+                                                                    </tr>
+                                                                }
+
+                                                            }
+                                                            <tr>
+                                                                <td colspan="6" class="text-center text-muted">
+                                                                    <i class="fa fa-file"></i> <br />Ma'lumot yo‘q
+                                                                </td>
+                                                            </tr>
+
+
+                                                        </tbody>
+                                                    </table>
+
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accardion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#5.2">
+                                                <span>5.2 Har oyda umumiy o‘quvchilarning 30 foizdan 50 foizgacha jalb qilingan bo‘lsa (<strong>20 ball</strong>)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <span class="text-success ms-auto text-end" style="min-width: 200px;">20 / <span class="text-danger">0</span></span>
+                                            </button>
+                                        </h2>
+                                        <div id="5.2" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+                                                <div class="body">
+                                                    <div class="container-fluid">
+                                                        <div class="row g-2 d-flex justify-content-center align-items-center">
+                                                            <div class="col-md-8">
+                                                                <div class="row g-2">
+                                                                    <div class="col-md-4">
+                                                                        <input type="text" class="form-control" placeholder="Izoh">
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <input type="date" class="form-control">
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <label for="fileUpload" class="btn btn-outline-primary w-100 py-1 px-3 d-flex align-items-center justify-content-center">
+                                                                            <i class="fa fa-upload me-2"></i> Yuklash
+                                                                        </label>
+                                                                        <input type="file" id="fileUpload" class="d-none">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 d-flex justify-content-center">
+                                                                <button class="btn btn-primary py-1 px-4" style="background-color: dodgerblue; width: 180px;">Yuklash</button>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="mt-4">
+                                                    </div>
+                                                    <table class="table table-striped mt-3">
+                                                        <thead class="text-white" style="background-color: dimgray; border-bottom: 2px solid #ccc;">
+                                                            <tr>
+                                                                <th style="border: 1px solid #ccc; text-align:center">#</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Izoh</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Holati</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Ball</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Sana</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Tahrirlash</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody id="tableBody" style="background-color: aliceblue;">
+                                                            <tr id="noDataRow">
+                                                                <td colspan="6" class="text-center text-muted">
+                                                                    <i class="fa fa-file"></i> <br />Ma'lumot yo‘q
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accardion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#5.3">
+                                                <span>5.3 Har oyda umumiy o‘quvchilarning 50 va undan yuqori foizi jalb qilingan bo‘lsa (<strong>30 ball</strong>)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <span class="text-success ms-auto text-end" style="min-width: 200px;">30 / <span class="text-danger">0</span></span>
+                                            </button>
+                                        </h2>
+                                        <div id="5.3" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+                                                <div class="body">
+                                                    <div class="container-fluid">
+                                                        <div class="row g-2 d-flex justify-content-center align-items-center">
+                                                            <div class="col-md-8">
+                                                                <div class="row g-2">
+                                                                    <div class="col-md-4">
+                                                                        <input type="text" class="form-control" placeholder="Izoh">
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <input type="date" class="form-control">
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <label for="fileUpload" class="btn btn-outline-primary w-100 py-1 px-3 d-flex align-items-center justify-content-center">
+                                                                            <i class="fa fa-upload me-2"></i> Yuklash
+                                                                        </label>
+                                                                        <input type="file" id="fileUpload" class="d-none">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 d-flex justify-content-center">
+                                                                <button class="btn btn-primary py-1 px-4" style="background-color: dodgerblue; width: 180px;">Yuklash</button>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="mt-4">
+                                                    </div>
+                                                    <table class="table table-striped mt-3">
+                                                        <thead class="text-white" style="background-color: dimgray; border-bottom: 2px solid #ccc;">
+                                                            <tr>
+                                                                <th style="border: 1px solid #ccc; text-align:center">#</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Izoh</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Holati</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Ball</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Sana</th>
+                                                                <th style="border: 1px solid #ccc; text-align:center">Tahrirlash</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody id="tableBody" style="background-color: aliceblue;">
+                                                            <tr id="noDataRow">
+                                                                <td colspan="6" class="text-center text-muted">
+                                                                    <i class="fa fa-file"></i> <br />Ma'lumot yo‘q
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        
                 </div>
+                
             </div>
         </div>
     </div>
@@ -274,3 +1194,37 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+@if (TempData["successMessage"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        @TempData["successMessage"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+@if (TempData["errorMessage"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        @TempData["errorMessage"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+<script>
+        function showFileName(input) {
+        if (input.files.length > 0) {
+            document.getElementById('fileName').textContent = input.files[0].name;
+        } else {
+            document.getElementById('fileName').textContent = "";
+        }
+    }
+    setTimeout(function () {
+        let alerts = document.querySelectorAll('.alert');
+        alerts.forEach(alert => {
+            alert.classList.remove('show');
+            alert.classList.add('fade');
+            setTimeout(() => alert.remove(), 500);
+        });
+    }, 5000);
+</script>
